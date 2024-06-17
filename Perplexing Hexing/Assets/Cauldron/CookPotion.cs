@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit.Filtering;
+using UnityEngine.XR.Interaction.Toolkit.Inputs;
 using UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation;
 
 public class CookPotion : MonoBehaviour
@@ -34,6 +36,11 @@ public class CookPotion : MonoBehaviour
 
     bool m_canCook = true;
 
+    [SerializeField]
+    private GameObject m_xrOrigin;
+
+    InputActionManager m_vrInput;
+
     Coroutine m_canCookCoroutine;
 
     // Start is called before the first frame update
@@ -41,6 +48,7 @@ public class CookPotion : MonoBehaviour
     {
         m_cauldron = GetComponent<Cauldron>();
         m_playerInput = GetComponent<PlayerInput>();
+        m_vrInput = m_xrOrigin.GetComponent<InputActionManager>();
     }
 
     private void OnEnable()
@@ -67,7 +75,9 @@ public class CookPotion : MonoBehaviour
         {
             Debug.Log("START COOKING");
             Cooking(m_cauldron, m_cookTime);
-        }        
+        }     
+        
+        
     }
 
     public void Cooking(Cauldron cauldron, CookTime time)
