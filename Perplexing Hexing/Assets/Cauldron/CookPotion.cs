@@ -59,15 +59,15 @@ public class CookPotion : MonoBehaviour
             {
                 m_cauldron.Potion = 1;
             }         
-            m_cauldron.currentIgredients.Clear();
+            //m_cauldron.currentIngredients.Clear();
             m_canCook = true;
         }
 
-        if (m_device.gripAction.ToInputAction().WasPressedThisFrame() && m_canCook && m_cauldron.currentIgredients.SequenceEqual(m_testPotion.Recipe))
-        {
-            Debug.Log("START COOKING");
-            Cooking(m_cauldron, m_cookTime);
-        }        
+        //if (m_device.gripAction.ToInputAction().WasPressedThisFrame() && m_canCook && m_cauldron.currentIngredients.SequenceEqual(m_testPotion.Recipe))
+        //{
+        //    Debug.Log("START COOKING");
+        //    Cooking(m_cauldron, m_cookTime);
+        //}        
     }
 
     public void Cooking(Cauldron cauldron, CookTime time)
