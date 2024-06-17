@@ -42,7 +42,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Fill: 0.673
+    - _Fill: 0.562
     - _FresnelPower: 3.29
     - _FresnelStrength: 2
     - _QueueControl: 0
@@ -50,7 +50,7 @@ Material:
     - _RimSize: 0.15
     - _RimStrength: 17.19
     - _WaveSpeed: -0.5
-    - _WaveStrength: 0.3
+    - _WaveStrength: 0
     - _WaveWithWobbleAmount: 0.17
     - _WobbleAmount: 0.366
     - _WobbleX: 0
