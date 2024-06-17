@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/EmilyScene.unity
+    guid: 1d7ae366d5546fb4397d6b2a1eb80681
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 96342e023f4991e40877f4978c768ecf, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: d9bcefa98c295e448800b21a8f284d64, type: 2}
