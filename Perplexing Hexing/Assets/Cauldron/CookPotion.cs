@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit.Filtering;
@@ -38,6 +39,9 @@ public class CookPotion : MonoBehaviour
 
     ControllerReference m_playerControllers;
 
+    [SerializeField]
+    TextMeshProUGUI m_cookText;
+
 
     // Start is called before the first frame update
     void Start()
@@ -54,7 +58,9 @@ public class CookPotion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (m_device.gripAction.ToInputAction().WasPressedThisFrame() && !m_canCook)
+        m_cookText.text = m_cookTime.ToString();
+
+        if (m_playerControllers.rightController.activateAction.action.WasPressedThisFrame() && !m_canCook)
         {
             Debug.Log("Finish Cooking");
             //StopCoroutine(CookingAction(m_cookTime));
@@ -65,6 +71,12 @@ public class CookPotion : MonoBehaviour
             }         
             //m_cauldron.currentIngredients.Clear();
             m_canCook = true;
+        }
+
+        if (m_playerControllers.rightController.activateAction.action.WasPressedThisFrame() && m_canCook)
+        {
+            Debug.Log("START COOKING");
+            Cooking(m_cauldron, m_cookTime);
         }
 
         //if (m_device.gripAction.ToInputAction().WasPressedThisFrame() && m_canCook && m_cauldron.currentIngredients.SequenceEqual(m_testPotion.Recipe))

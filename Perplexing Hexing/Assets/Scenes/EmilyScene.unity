@@ -161,6 +161,7 @@ MonoBehaviour:
   m_cauldron: {fileID: 0}
   m_testPotion: {fileID: 11400000, guid: beb4c0253fcae9c49b4cde3ed8b4ebc9, type: 2}
   m_device: {fileID: 501532704}
+  m_cookText: {fileID: 2022873835}
 --- !u!114 &22433850
 MonoBehaviour:
   m_ObjectHideFlags: 0
