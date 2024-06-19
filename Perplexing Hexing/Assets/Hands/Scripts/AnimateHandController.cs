@@ -13,7 +13,9 @@ public class AnimateHandController : MonoBehaviour
     InputActionReference triggerInputAction;
 
     Animator m_handAnimator;
+    [SerializeField]
     float m_gripValue;
+    [SerializeField]
     float m_triggerValue;
 
     // Start is called before the first frame update
@@ -37,7 +39,7 @@ public class AnimateHandController : MonoBehaviour
 
     private void AnimateTrigger()
     {
-        m_triggerValue = gripInputAction.action.ReadValue<float>();
+        m_triggerValue = triggerInputAction.action.ReadValue<float>();
         m_handAnimator.SetFloat("Trigger", m_triggerValue);
     }
 }
