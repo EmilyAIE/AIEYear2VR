@@ -8,17 +8,16 @@ public class Ingredient : MonoBehaviour
     // Dan's Dodgy Code
 
     public string Name;
-    public cookState CookState;
-    public string Color;
-    public List<Ingredient> Ingredients;
+    private Collider m_collider;
 
-    public enum cookState
+    private void Start()
     {
-        underCooked,
-        light,
-        medium,
-        wellDone,
-        overCooked,
+        m_collider = GetComponent<Collider>();
+    }
+
+    public void DisableCollider()
+    {
+        m_collider.enabled = false;
     }
 
 

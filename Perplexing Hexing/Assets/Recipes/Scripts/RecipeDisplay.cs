@@ -9,7 +9,7 @@ public class RecipeDisplay : MonoBehaviour
 
     [SerializeField]
     public TextMeshProUGUI m_title, m_cookState, m_color;
-    public GameObject Ingredients;
+    public GameObject IngredientsContainer;
     public GameObject IngredientDisplayPrefab; 
 
     private void Start()
@@ -20,12 +20,8 @@ public class RecipeDisplay : MonoBehaviour
 
         for(int i = 0; i < m_recipeData.Ingredients.Count; i++)
         {
-            GameObject ingredientText = Instantiate(IngredientDisplayPrefab, Ingredients.transform);
-
+            GameObject ingredientText = Instantiate(IngredientDisplayPrefab, IngredientsContainer.transform);
             ingredientText.GetComponent<TextMeshProUGUI>().text = "Ingredient " + (i + 1) + ": " + m_recipeData.Ingredients[i];
         }
     }
-
-    
-
 }
