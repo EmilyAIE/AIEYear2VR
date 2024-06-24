@@ -6,9 +6,9 @@ using UnityEngine.Rendering;
 
 public class GameManager : MonoBehaviour
 {
-    private float m_timer;
+    private float m_timer = 0;
     [SerializeField]
-    public float m_recipeSpawnDelay;
+    private float m_recipeSpawnDelay;
     public Vector3 RecipeFaceDirection;
 
     [Header("Green Recipes")]
@@ -16,21 +16,21 @@ public class GameManager : MonoBehaviour
     public List<GameObject> GreenRecipePrefabs;
     private GameObject m_activeGreenRecipe;    
     [SerializeField]
-    Vector3 m_greenRecipeSpawnPos;
+    GameObject m_greenRecipeSpawnPos;
 
     [Header("Purple Recipes")]
     public Cauldron PurpleCauldron;
     public List<GameObject> PurpleRecipePrefabs;
     private GameObject m_activePurpleRecipe;    
     [SerializeField]
-    Vector3 m_purpleRecipeSpawnPos;
+    GameObject m_purpleRecipeSpawnPos;
 
     [Header("Amber Recipes")]
     public Cauldron AmberCauldron;
     public List<GameObject> AmberRecipePrefabs;
     private GameObject m_activeAmberRecipe;    
     [SerializeField]
-    Vector3 m_amberRecipeSpawnPos;
+    GameObject m_amberRecipeSpawnPos;
 
     private bool m_allColorsActive = false;
 
@@ -43,10 +43,10 @@ public class GameManager : MonoBehaviour
         while(!m_allColorsActive)
         {
             m_timer += Time.deltaTime;
-            if(m_timer >= m_recipeSpawnDelay)
+            if(m_timer > m_recipeSpawnDelay)
             {
-                GenerateRecipe(SelectRecipeColor());
                 m_timer = 0;
+                GenerateRecipe(SelectRecipeColor());                
                 if(m_inactiveColors.Count == 0)
                     m_allColorsActive = true;
             }
@@ -61,19 +61,19 @@ public class GameManager : MonoBehaviour
                 break;
             case "Green":
                 int randomSelectG = Random.Range(0, GreenRecipePrefabs.Count);
-                m_activeGreenRecipe = Instantiate(GreenRecipePrefabs[randomSelectG], m_greenRecipeSpawnPos, Quaternion.Euler(RecipeFaceDirection));
+                m_activeGreenRecipe = Instantiate(GreenRecipePrefabs[randomSelectG], m_greenRecipeSpawnPos.transform.position, Quaternion.Euler(RecipeFaceDirection));
                 Recipe recipeG = m_activeGreenRecipe.GetComponent<Recipe>();
                 GreenCauldron.GetRecipe(recipeG);
                 break;
             case "Purple":
                 int randomSelectP = Random.Range(0, PurpleRecipePrefabs.Count);
-                m_activePurpleRecipe = Instantiate(PurpleRecipePrefabs[randomSelectP], m_purpleRecipeSpawnPos, Quaternion.Euler(RecipeFaceDirection));
+                m_activePurpleRecipe = Instantiate(PurpleRecipePrefabs[randomSelectP], m_purpleRecipeSpawnPos.transform.position, Quaternion.Euler(RecipeFaceDirection));
                 Recipe recipeP = m_activePurpleRecipe.GetComponent<Recipe>();
                 PurpleCauldron.GetRecipe(recipeP);
                 break;
             case "Amber":
                 int randomSelectA = Random.Range(0, AmberRecipePrefabs.Count);
-                m_activeAmberRecipe = Instantiate(AmberRecipePrefabs[randomSelectA], m_amberRecipeSpawnPos, Quaternion.Euler(RecipeFaceDirection));
+                m_activeAmberRecipe = Instantiate(AmberRecipePrefabs[randomSelectA], m_amberRecipeSpawnPos.transform.position, Quaternion.Euler(RecipeFaceDirection));
                 Recipe recipeA = m_activeAmberRecipe.GetComponent<Recipe>();
                 AmberCauldron.GetRecipe(recipeA);  
                 break;
@@ -82,7 +82,8 @@ public class GameManager : MonoBehaviour
 
     public void RemoveCurrentRecipe(string color)
     {
-        if(m_allColorsActive)
+        if (m_allColorsActive)
+            m_allColorsActive = false;
 
         switch (color)
         {
@@ -114,6 +115,8 @@ public class GameManager : MonoBehaviour
         color = m_inactiveColors[randomInt];
         m_activeColors.Add(color);
         m_inactiveColors.Remove(color);
+        if (m_activeColors.Count == 3)
+            m_allColorsActive = true;
         return color;
     }
 }
