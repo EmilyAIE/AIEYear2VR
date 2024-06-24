@@ -92,10 +92,5 @@ public class Recipe : ScriptableObject
                     break;
             }
         }
-
     }
-
-    
-
-
 }

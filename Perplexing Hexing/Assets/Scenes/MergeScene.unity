@@ -493,7 +493,7 @@ PrefabInstance:
       objectReference: {fileID: 8911148276192605613}
     - target: {fileID: 2457650656896735195, guid: 986cb0c279290664bb1d4cc36e77e1c3, type: 3}
       propertyPath: m_recipeSpawnDelay
-      value: 20
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2457650656896735195, guid: 986cb0c279290664bb1d4cc36e77e1c3, type: 3}
       propertyPath: RecipeFaceDirection.z
