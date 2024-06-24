@@ -67,7 +67,7 @@ public class CookPotion : MonoBehaviour
             StopAllCoroutines();
             if (m_cookTime == CookTime.GOOD)
             {
-                m_cauldron.Potion = 1;
+                //m_cauldron.Potion = 1;
             }         
             //m_cauldron.currentIngredients.Clear();
             m_canCook = true;
