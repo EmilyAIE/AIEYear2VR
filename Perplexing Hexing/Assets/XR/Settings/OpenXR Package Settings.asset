@@ -490,13 +490,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f0ebc320a151d3408ea1e9fce54d40e, type: 3}
   m_Name: OpenXR Package Settings
   m_EditorClassIdentifier: 
-  Keys: 0100000004000000070000000d0000000e000000
+  Keys: 0100000004000000070000000d0000000e00000019000000
   Values:
   - {fileID: 7594644621495719849}
   - {fileID: 3345979713421848817}
   - {fileID: -8174372121366627461}
   - {fileID: 7957939469271251185}
   - {fileID: 7036056745307744202}
+  - {fileID: 5248055221755336743}
 --- !u!114 &715249567977393266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -714,6 +715,21 @@ MonoBehaviour:
   company: Unity
   priority: 0
   required: 0
+--- !u!114 &5248055221755336743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a1f07dc5afe854f9f12a4194aca3fb, type: 3}
+  m_Name: tvOS
+  m_EditorClassIdentifier: 
+  features: []
+  m_renderMode: 1
+  m_depthSubmissionMode: 0
 --- !u!114 &5413562328287164224
 MonoBehaviour:
   m_ObjectHideFlags: 0
