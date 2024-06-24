@@ -1,12 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Controls;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit.Filtering;
-using UnityEngine.XR.Interaction.Toolkit.Inputs;
 using UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation;
 
 public class CookPotion : MonoBehaviour
@@ -29,26 +27,28 @@ public class CookPotion : MonoBehaviour
     [SerializeField]
     private TestPotion m_testPotion;
 
-    private PlayerInput m_playerInput;
-    private InputAction m_cookAction;
+    //private PlayerInput m_playerInput;
+    //private InputAction m_cookAction;
     
     public XRDeviceSimulator m_device;
 
     bool m_canCook = true;
 
-    [SerializeField]
-    private GameObject m_xrOrigin;
-
-    InputActionManager m_vrInput;
-
     Coroutine m_canCookCoroutine;
+
+
+    ControllerReference m_playerControllers;
+
+    [SerializeField]
+    TextMeshProUGUI m_cookText;
+
 
     // Start is called before the first frame update
     void Start()
     {
         m_cauldron = GetComponent<Cauldron>();
-        m_playerInput = GetComponent<PlayerInput>();
-        m_vrInput = m_xrOrigin.GetComponent<InputActionManager>();
+        //m_playerInput = GetComponent<PlayerInput>();
+        m_playerControllers = GameObject.FindAnyObjectByType<ControllerReference>();
     }
 
     private void OnEnable()
@@ -58,7 +58,9 @@ public class CookPotion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (m_device.gripAction.ToInputAction().WasPressedThisFrame() && !m_canCook)
+        m_cookText.text = m_cookTime.ToString();
+
+        if (m_playerControllers.rightController.activateAction.action.WasPressedThisFrame() && !m_canCook)
         {
             Debug.Log("Finish Cooking");
             //StopCoroutine(CookingAction(m_cookTime));
@@ -67,17 +69,22 @@ public class CookPotion : MonoBehaviour
             {
                 m_cauldron.Potion = 1;
             }         
-            m_cauldron.currentIgredients.Clear();
+            //m_cauldron.currentIngredients.Clear();
             m_canCook = true;
         }
 
-        if (m_device.gripAction.ToInputAction().WasPressedThisFrame() && m_canCook && m_cauldron.currentIgredients.SequenceEqual(m_testPotion.Recipe))
+        if (m_playerControllers.rightController.activateAction.action.WasPressedThisFrame() && m_canCook)
         {
             Debug.Log("START COOKING");
             Cooking(m_cauldron, m_cookTime);
-        }     
-        
-        
+        }
+
+        //if (m_device.gripAction.ToInputAction().WasPressedThisFrame() && m_canCook && m_cauldron.currentIngredients.SequenceEqual(m_testPotion.Recipe))
+        //{
+        //    Debug.Log("START COOKING");
+        //    Cooking(m_cauldron, m_cookTime);
+        //}
+
     }
 
     public void Cooking(Cauldron cauldron, CookTime time)
