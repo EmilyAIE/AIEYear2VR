@@ -7,6 +7,8 @@ public class Vial : MonoBehaviour
     private GameObject m_gameObject;
     public GameObject m_directionObject;
     private Vector3 m_directionVector;
+    public bool CorrectPotion = false;
+    public string Colour;
 
     private void Start()
     {
@@ -23,5 +25,5 @@ public class Vial : MonoBehaviour
         return false;
     }
 
-    public bool CorrectPotion = false;
+    
 }

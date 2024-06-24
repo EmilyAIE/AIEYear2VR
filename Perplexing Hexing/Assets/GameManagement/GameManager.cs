@@ -13,24 +13,27 @@ public class GameManager : MonoBehaviour
 
     [Header("Green Recipes")]
     public Cauldron GreenCauldron;
-    public List<GameObject> GreenRecipePrefabs;
-    private GameObject m_activeGreenRecipe;    
     [SerializeField]
     GameObject m_greenRecipeSpawnPos;
+    public List<GameObject> GreenRecipePrefabs;
+    private GameObject m_activeGreenRecipe;    
+    
 
     [Header("Purple Recipes")]
     public Cauldron PurpleCauldron;
-    public List<GameObject> PurpleRecipePrefabs;
-    private GameObject m_activePurpleRecipe;    
     [SerializeField]
     GameObject m_purpleRecipeSpawnPos;
+    public List<GameObject> PurpleRecipePrefabs;
+    private GameObject m_activePurpleRecipe;    
+    
 
     [Header("Amber Recipes")]
     public Cauldron AmberCauldron;
-    public List<GameObject> AmberRecipePrefabs;
-    private GameObject m_activeAmberRecipe;    
     [SerializeField]
     GameObject m_amberRecipeSpawnPos;
+    public List<GameObject> AmberRecipePrefabs;
+    private GameObject m_activeAmberRecipe;    
+    
 
     private bool m_allColorsActive = false;
 
@@ -107,7 +110,6 @@ public class GameManager : MonoBehaviour
                 break;
         }        
     }
-
 
     public string SelectRecipeColor()
     {
