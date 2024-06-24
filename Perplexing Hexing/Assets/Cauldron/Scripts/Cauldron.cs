@@ -53,7 +53,7 @@ public class Cauldron : MonoBehaviour
 
     private void Update()
     {
-        while(m_isCooking)
+        if(m_isCooking)
         {
             m_timer += Time.deltaTime;
             if(m_timer >= m_cookStateDuration)
