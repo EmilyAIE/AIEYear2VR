@@ -22,7 +22,7 @@ public class CheckPotion : MonoBehaviour
             }
             else
             {
-                Fail();
+                Fail(m_currentVial);
             }
         }
     }
@@ -33,8 +33,9 @@ public class CheckPotion : MonoBehaviour
         Invoke("DestroyVial", 3);
     }
 
-    public void Fail()
+    public void Fail(Vial vial)
     {
+        m_gM.RemoveCurrentRecipe(vial.Colour);
         Invoke("DestroyVial", 3);
     }
 
