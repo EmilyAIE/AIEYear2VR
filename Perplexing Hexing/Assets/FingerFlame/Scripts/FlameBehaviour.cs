@@ -14,11 +14,10 @@ public class FlameBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Cauldron cauldron = other.GetComponent<Cauldron>();
-        if (cauldron)
+        CauldronFlame flame = other.GetComponent<CauldronFlame>();
+        if (flame)
         {
-            Debug.Log("COOKCOOKCOOKCOOKCOOK");
-            m_cauldron.StartCooking();
+            flame.StartCooking();
         }
     }
 }
