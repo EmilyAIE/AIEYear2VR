@@ -21,8 +21,22 @@ public class Recipe : ScriptableObject
         wellDone,
         overCooked
     }
-    public cookState CookState;    
+    public cookState CookState;
+    public enum Ingredient
+    {
+        LiveLemming,
+        EyeOfNewt,
+        MagicMushroom,
+        SnakeTongue,
+        MoonShard,
+        BatWing,
+        UnicornHorn,
+        FrozenTear,
+        WrappedCandy
+    }
+    [HideInInspector]
     public List<string> Ingredients;
+    public List<Ingredient> IngredientSelect;
     [HideInInspector]
     public string Color;
 
@@ -43,7 +57,45 @@ public class Recipe : ScriptableObject
                 break;
 
         }
+
+        for(int i = 0; i < IngredientSelect.Count; i++)
+        {
+            switch(IngredientSelect[i])
+            {
+                default:
+                case Ingredient.LiveLemming:
+                    Ingredients.Add("Live Lemming");
+                    break;
+                case Ingredient.EyeOfNewt:
+                    Ingredients.Add("Eye Of Newt");
+                    break;
+                case Ingredient.MagicMushroom:
+                    Ingredients.Add("Magic Mushroom");
+                    break;
+                case Ingredient.SnakeTongue:
+                    Ingredients.Add("Snake Tongue");
+                    break;
+                case Ingredient.MoonShard:
+                    Ingredients.Add("Moon Shard");
+                    break;
+                case Ingredient.BatWing:
+                    Ingredients.Add("Bat Wing");
+                    break;
+                case Ingredient.UnicornHorn:
+                    Ingredients.Add("Unicorn Horn");
+                    break;
+                case Ingredient.FrozenTear:
+                    Ingredients.Add("Frozen Tear");
+                    break;
+                case Ingredient.WrappedCandy:
+                    Ingredients.Add("Wrapped Candy");
+                    break;
+            }
+        }
+
     }
+
+    
 
 
 }
