@@ -22,7 +22,7 @@ public class CauldronCollider : MonoBehaviour
                 vial.Colour = m_cauldron.Colour.ToString();
                 vial.CorrectPotion = m_cauldron.CompareRecipe();
             }
-            Debug.Log("I AM A VIAL AND IM FULL OF JUICE OF COLOUR " + vial.Colour);
+            Debug.Log("I AM A VIAL AND IM FULL OF " + vial.Colour + " JUICE");
         }
         if(collider.CompareTag("Ingredient"))
         {
