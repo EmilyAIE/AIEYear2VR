@@ -7,17 +7,19 @@ public class Ingredient : MonoBehaviour
 {
     // Dan's Dodgy Code
 
-    public IngredientType type;
+    public string Name;
+    public cookState CookState;
+    public string Color;
+    public List<Ingredient> Ingredients;
 
-    public enum IngredientType
+    public enum cookState
     {
-        batWing,
-        eyeOfNewt,
-        frogTongue
+        underCooked,
+        light,
+        medium,
+        wellDone,
+        overCooked,
     }
 
-    public void FallIntoCauldron()
-    {
-        Destroy(gameObject);
-    }
+
 }
