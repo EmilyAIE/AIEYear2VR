@@ -23,7 +23,6 @@ public class DespawnIngredient : MonoBehaviour
     {
         if (collision.gameObject.tag == "BadSurface")
         {
-            Destroy(gameObject, m_deleteTime);
             Invoke("DestroyIngredient", m_deleteTime);
         }
     }

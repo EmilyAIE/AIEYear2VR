@@ -25,7 +25,8 @@ Material:
   m_ValidKeywords:
   - _ALPHATEST_ON
   - _SURFACE_TYPE_TRANSPARENT
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - _RECEIVE_SHADOWS_OFF
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -53,28 +54,35 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 1
+    - _Alpha_Clip_Threshold: 0.509
+    - _Ambient_Occlusion: 1
     - _Blackness_Multiplier: 0
     - _Blackness_Offset: 0
     - _Blend: 0
     - _CastShadows: 0
     - _Cull: 2
     - _DstBlend: 10
+    - _Flame_Noise_Scale: 1.28
     - _Flame_Speed: 0.69
     - _Heat_Distortion_Strength: 0
     - _Intersection_Flame_Multiplier: 3.6
     - _Intersection_Flame_Offset: 0.57
     - _Intersection_and_Spark_Intensity: 2.69
+    - _Metallic: 0
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _ReceiveShadows: 0
+    - _Smoothness: 0.828
     - _SrcBlend: 5
     - _Surface: 1
-    - _Visibility: 1.62
+    - _Visibility: 1.07
+    - _WorkflowMode: 1
     - _ZTest: 4
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
-    - _Flame_Highlight_Color: {r: 0.13655694, g: 2.6082382, b: 0.15254922, a: 0}
+    - _Flame_Highlight_Color: {r: 6.6489086, g: 1.9339976, b: 0.34499058, a: 0}
     - _Intersection_Flame_Color: {r: 128, g: 3.018867, b: 3.018867, a: 0}
-    - _Main_Flame_Color_Bottom: {r: 0, g: 0.9902081, b: 1, a: 0}
-    - _Main_Flame_Color_Top: {r: 1, g: 0.0235849, b: 0.7027746, a: 0}
+    - _Main_Flame_Color_Bottom: {r: 0, g: 1.0481818, b: 1.0592737, a: 0}
+    - _Main_Flame_Color_Top: {r: 1.4980392, g: 0.039215688, b: 1.0588236, a: 0}
   m_BuildTextureStacks: []
