@@ -26,7 +26,7 @@ public class CauldronCollider : MonoBehaviour
         {
             Ingredient ingredient = collider.GetComponent<Ingredient>();
             m_cauldron.AddToMix(ingredient.Name);
-            ingredient.DisableCollider();
+            Destroy(ingredient.gameObject);
         }
     }
 }

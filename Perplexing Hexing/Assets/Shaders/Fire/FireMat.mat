@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7214750942018102147
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FireMat
+  m_Shader: {fileID: -6465566751694194690, guid: 67af62cd8486b524a9b2b0e12df4ec78, type: 3}
+  m_ValidKeywords:
+  - _ALPHATEST_ON
+  - _SURFACE_TYPE_TRANSPARENT
+  m_InvalidKeywords:
+  - _RECEIVE_SHADOWS_OFF
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    RenderType: Transparent
+  disabledShaderPasses:
+  - SHADOWCASTER
+  - DepthOnly
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaClip: 1
+    - _Alpha_Clip_Threshold: 0.509
+    - _Ambient_Occlusion: 1
+    - _Blackness_Multiplier: 0
+    - _Blackness_Offset: 0
+    - _Blend: 0
+    - _CastShadows: 0
+    - _Cull: 2
+    - _DstBlend: 10
+    - _Flame_Noise_Scale: 1.28
+    - _Flame_Speed: 0.69
+    - _Heat_Distortion_Strength: 0
+    - _Intersection_Flame_Multiplier: 3.6
+    - _Intersection_Flame_Offset: 0.57
+    - _Intersection_and_Spark_Intensity: 2.69
+    - _Metallic: 0
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _ReceiveShadows: 0
+    - _Smoothness: 0.828
+    - _SrcBlend: 5
+    - _Surface: 1
+    - _Visibility: 1.07
+    - _WorkflowMode: 1
+    - _Wrap_Around: 1
+    - _ZTest: 4
+    - _ZWrite: 0
+    - _ZWriteControl: 0
+    m_Colors:
+    - _Flame_Highlight_Color: {r: 6.6489086, g: 1.9339976, b: 0.34499058, a: 0}
+    - _Intersection_Flame_Color: {r: 128, g: 3.018867, b: 3.018867, a: 0}
+    - _Main_Flame_Color_Bottom: {r: 0, g: 1.0481818, b: 1.0592737, a: 0}
+    - _Main_Flame_Color_Top: {r: 1.4980392, g: 0.039215688, b: 1.0588236, a: 0}
+  m_BuildTextureStacks: []

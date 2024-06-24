@@ -56,6 +56,9 @@ Material:
     - _RippleDistortionAmount: 0.05
     - _RippleSpeed: 0.17
     - _WaveHeight: 0.04
+    - _WaveLength: 0.5
     - _WaveSpeed: 0.2
-    m_Colors: []
+    - _WaveSteepness: 0.1
+    m_Colors:
+    - _WaveDirections: {r: 0, g: 0.2, b: 0.35, a: 0.75}
   m_BuildTextureStacks: []
