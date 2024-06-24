@@ -16,7 +16,8 @@ public class FlameBehaviour : MonoBehaviour
     {
         if (other.gameObject.GetComponent<Cauldron>())
         {
-
+            Debug.Log("COOKCOOKCOOKCOOKCOOK");
+            m_cauldron.StartCooking();
         }
     }
 }
