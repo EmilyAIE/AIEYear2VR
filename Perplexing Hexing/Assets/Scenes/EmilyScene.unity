@@ -239,6 +239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_cookStateDuration: 0
   m_liquid: {fileID: 0}
+  Colour: 0
   m_default: {fileID: 0}
   m_light: {fileID: 0}
   m_medium: {fileID: 0}
@@ -638,6 +639,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 1.952, z: 0}
+--- !u!1 &185904740
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 185904741}
+  m_Layer: 0
+  m_Name: DirectionObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &185904741
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185904740}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.716, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1270208650}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &289419563
 GameObject:
   m_ObjectHideFlags: 0
@@ -2197,7 +2229,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5287422
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2233,7 +2265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
@@ -2920,6 +2952,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PotionBottle
       objectReference: {fileID: 0}
+    - target: {fileID: 2411876953497777965, guid: 57dab7b3c8978b340a11dd352a6c8db3, type: 3}
+      propertyPath: m_TagString
+      value: Vial
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57dab7b3c8978b340a11dd352a6c8db3, type: 3}
 --- !u!1 &1270208644 stripped
@@ -3095,6 +3131,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!4 &1270208650 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2411876953497777953, guid: 57dab7b3c8978b340a11dd352a6c8db3, type: 3}
+  m_PrefabInstance: {fileID: 1270208643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1270208651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270208644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b26827af33f861499fde727bcc09eb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_directionObject: {fileID: 185904740}
+  CorrectPotion: 1
+  Colour: Green
 --- !u!1001 &1280605450
 PrefabInstance:
   m_ObjectHideFlags: 0
