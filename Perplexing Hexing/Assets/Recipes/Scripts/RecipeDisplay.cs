@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class RecipeDisplay : MonoBehaviour
 {
-    public Recipe m_recipeData;
+    public Recipe RecipeData;
 
     [SerializeField]
     public TextMeshProUGUI m_title, m_cookState, m_color;
@@ -14,14 +14,14 @@ public class RecipeDisplay : MonoBehaviour
 
     private void Start()
     {        
-        m_title.text = m_recipeData.Title;
-        m_cookState.text = "Duration: " + m_recipeData.CookState.ToString();
-        m_color.text = "Colour: " + m_recipeData.Color;
+        m_title.text = RecipeData.Title;
+        m_cookState.text = "Duration: " + RecipeData.CookState.ToString();
+        m_color.text = "Colour: " + RecipeData.Color;
 
-        for(int i = 0; i < m_recipeData.Ingredients.Count; i++)
+        for(int i = 0; i < RecipeData.Ingredients.Count; i++)
         {
             GameObject ingredientText = Instantiate(IngredientDisplayPrefab, IngredientsContainer.transform);
-            ingredientText.GetComponent<TextMeshProUGUI>().text = "Ingredient " + (i + 1) + ": " + m_recipeData.Ingredients[i];
+            ingredientText.GetComponent<TextMeshProUGUI>().text = "Ingredient " + (i + 1) + ": " + RecipeData.Ingredients[i];
         }
     }
 }
