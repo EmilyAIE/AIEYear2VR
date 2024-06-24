@@ -19,8 +19,10 @@ public class CauldronCollider : MonoBehaviour
             Vial vial = collider.GetComponent<Vial>();
             if(vial.CheckOrientation())
             {
+                vial.Colour = m_cauldron.Colour.ToString();
                 vial.CorrectPotion = m_cauldron.CompareRecipe();
-            }            
+            }
+            Debug.Log("I AM A VIAL AND IM FULL OF JUICE OF COLOUR " + vial.Colour);
         }
         if(collider.CompareTag("Ingredient"))
         {

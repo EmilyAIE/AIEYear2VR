@@ -20,6 +20,7 @@ public class Vial : MonoBehaviour
         m_directionVector.Normalize();
         if(m_directionVector.y > -1)
         {
+            
             return true;
         }
         return false;
