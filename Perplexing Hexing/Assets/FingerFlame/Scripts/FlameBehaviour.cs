@@ -14,7 +14,8 @@ public class FlameBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<Cauldron>())
+        Cauldron cauldron = other.GetComponent<Cauldron>();
+        if (cauldron)
         {
             Debug.Log("COOKCOOKCOOKCOOKCOOK");
             m_cauldron.StartCooking();
