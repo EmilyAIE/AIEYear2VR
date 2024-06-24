@@ -237,11 +237,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_cookStateDuration: 0
+  m_liquid: {fileID: 0}
   m_default: {fileID: 0}
   m_light: {fileID: 0}
   m_medium: {fileID: 0}
   m_wellDone: {fileID: 0}
-  Potion: 0
 --- !u!65 &22433851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1803,7 +1803,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 415543212}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e01566a591aab948b10f347424bea1c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f0b1b6cb33a4094f834f3676c471c76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_flame: {fileID: 1819321584}
@@ -2817,9 +2817,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
-  CookState: 0
-  Color: 
-  Ingredients: []
 --- !u!135 &1072556109
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3962,9 +3959,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
-  CookState: 0
-  Color: 
-  Ingredients: []
 --- !u!135 &1452287387
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5487,7 +5481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4913850873732414581, guid: 7b725126aa0fece4eb69425593d01d54, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b725126aa0fece4eb69425593d01d54, type: 3}
@@ -5501,6 +5495,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4913850873732414581, guid: 7b725126aa0fece4eb69425593d01d54, type: 3}
   m_PrefabInstance: {fileID: 1819321582}
   m_PrefabAsset: {fileID: 0}
+--- !u!135 &1819321587
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819321584}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.2
+  m_Center: {x: 0, y: 0, z: 0.15}
 --- !u!1 &1828219084
 GameObject:
   m_ObjectHideFlags: 0
@@ -5653,9 +5660,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
-  CookState: 0
-  Color: 
-  Ingredients: []
 --- !u!135 &1964414866
 SphereCollider:
   m_ObjectHideFlags: 0
