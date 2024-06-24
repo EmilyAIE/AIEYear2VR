@@ -23,12 +23,13 @@ public class Cauldron : MonoBehaviour
     GameObject m_liquid;    
     Renderer m_liquidRenderer;
 
-    public enum Color 
+    public enum Colours
     { 
         Green,
         Purple,
         Amber
-    }    
+    }
+    public Colours Colour;
 
     [Header("Materials for Cooked State")]
     [SerializeField] Material m_default;
@@ -148,6 +149,4 @@ public class Cauldron : MonoBehaviour
         EnterCookState(CookState.underCooked);
         m_isCooking = false;
     }
-
-
 }
