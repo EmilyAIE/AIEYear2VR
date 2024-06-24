@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lightning : MonoBehaviour
-{
-    public GameObject lightningOne;
+//public class Lightning : MonoBehaviour
+//{
+    /*public GameObject lightningOne;
     public GameObject lightningTwo;
     public GameObject lightingThree;
 
@@ -65,5 +65,5 @@ public class Lightning : MonoBehaviour
     void EndThunder()
     {
         audioOne.SetActive(false);
-    }
-}
+    }*/
+//}
