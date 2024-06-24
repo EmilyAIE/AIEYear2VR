@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: -4920187115400923199}
   - component: {fileID: 6502598923090901646}
   m_Layer: 0
-  m_Name: Geo_I_NewtEye
+  m_Name: Eye of Newt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -346,7 +346,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 6731942253838595303}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09df3decbdcf1ec4f99405e592953f2a, type: 3}
+  m_Script: {fileID: 11500000, guid: 1430797293d465f4782ca12f14934459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: Eye Of Newt
   m_deleteTime: 3
