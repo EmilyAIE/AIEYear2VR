@@ -168,8 +168,10 @@ public class Cauldron : MonoBehaviour
     {
         m_timer = 0;
         m_targetIngredients.Clear();
+        m_currentIngredients.Clear();
         EnterCookState(CookState.underCooked);
         m_isCooking = false;
+        UpdateCookText();
     }
 
     public int GetCookState()

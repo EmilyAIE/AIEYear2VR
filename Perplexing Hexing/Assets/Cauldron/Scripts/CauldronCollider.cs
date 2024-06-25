@@ -21,6 +21,7 @@ public class CauldronCollider : MonoBehaviour
             {
                 vial.Colour = m_cauldron.Colour.ToString();
                 vial.CorrectPotion = m_cauldron.CompareRecipe();
+                vial.SetLiquid(m_cauldron.GetCookState());
                 if(vial.CorrectPotion)
                 {
                     Debug.Log("Potion Is Correct");
