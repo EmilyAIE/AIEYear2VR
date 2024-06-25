@@ -18,10 +18,10 @@ public class RegenIngredient : MonoBehaviour
 
     private void Start()
     {
-        GameObject ingredient = Instantiate(m_ingredient, WaitingObject.transform);
+        Instantiate(m_ingredient, WaitingObject.transform);
         for (int i = 0; i < m_ingredientCount - 1; i++)
         {
-            Instantiate(m_ingredient, InactiveObjects.transform);
+            GameObject ingredient = Instantiate(m_ingredient, InactiveObjects.transform);
             ingredient.SetActive(false);            
         }
     }
