@@ -45,8 +45,7 @@ public class GameManager : MonoBehaviour
     {         
         if(!m_allColorsActive)
         {
-            m_timer += Time.deltaTime;
-            Debug.Log(m_timer);
+            m_timer += Time.deltaTime;           
             if(m_timer > m_recipeSpawnDelay)
             {
                 m_timer = 0;
