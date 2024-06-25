@@ -28,7 +28,8 @@ public class CauldronCollider : MonoBehaviour
                 else
                 {
                     Debug.Log("Potion Is Incorrect");
-                }                
+                }
+                m_cauldron.StopCooking();
             }            
         }
         if(collider.CompareTag("Ingredient"))
