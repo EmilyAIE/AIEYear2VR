@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Pot
+  m_Name: PotAmberLight
   m_Shader: {fileID: -6465566751694194690, guid: 951f59f3b0204b046ba6c20152f1091b, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
