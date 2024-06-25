@@ -2,9 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using TMPro;
 
 public class Cauldron : MonoBehaviour
 {
+
+    //CANVAS STUFF FOR DEBUGGING
+    [SerializeField]
+    TextMeshProUGUI m_ingredientListText;
+
     //Andrew's actual code
     float m_timer;
     [SerializeField]
@@ -41,8 +47,8 @@ public class Cauldron : MonoBehaviour
 
     private Recipe m_activeRecipe;
     
-    private List<string> m_currentIngredients;
-    private List<string> m_targetIngredients;
+    private List<string> m_currentIngredients = new List<string>();
+    private List<string> m_targetIngredients = new List<string>();
 
     private bool m_isCooking;
 
@@ -67,6 +73,11 @@ public class Cauldron : MonoBehaviour
     public void AddToMix(string ingredient)
     {
         m_currentIngredients.Add(ingredient);
+        m_ingredientListText.text = "";
+        for (int i = 0; i < m_currentIngredients.Count; i++)
+        {
+            m_ingredientListText.text += m_currentIngredients[i] + "\n";
+        }
     }
 
     private void EnterCookState(CookState cookstate)

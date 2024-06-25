@@ -14,6 +14,7 @@ public class CauldronCollider : MonoBehaviour
 
     public void OnTriggerEnter(Collider collider)
     {
+        Debug.Log("TRIGGERED");
         if (collider.CompareTag("Vial"))
         {
             Vial vial = collider.GetComponent<Vial>();
@@ -26,9 +27,10 @@ public class CauldronCollider : MonoBehaviour
         }
         if(collider.CompareTag("Ingredient"))
         {
-            Ingredient ingredient = collider.GetComponent<Ingredient>();
+            Debug.Log("INGREDIENT");
+            Ingredient ingredient = collider.GetComponentInParent<Ingredient>();
             m_cauldron.AddToMix(ingredient.Name);
-            Destroy(ingredient.gameObject);
+            Destroy(ingredient.transform.parent.gameObject);
         }
     }
 }

@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 2118141382755437193}
   m_Layer: 0
   m_Name: Moon Shard
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
