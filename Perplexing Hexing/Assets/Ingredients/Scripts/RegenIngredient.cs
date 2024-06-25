@@ -63,6 +63,7 @@ public class RegenIngredient : MonoBehaviour
 
     public void SetInactive(GameObject activeObject)
     {
+
         activeObject.SetActive(false);
         activeObject.transform.parent = InactiveObjects.transform;
         activeObject.transform.position = InactiveObjects.transform.position;
