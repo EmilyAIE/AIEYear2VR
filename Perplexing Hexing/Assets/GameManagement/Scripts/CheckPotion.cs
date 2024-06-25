@@ -33,13 +33,13 @@ public class CheckPotion : MonoBehaviour
     {
         m_rend.material.color = Color.green;
         m_gM.RemoveCurrentRecipe(vial.Colour);
-        m_currentVial.Invoke("DestroyVial", 3);
+        m_currentVial.DestroyVial();        
     }
 
     public void Fail(Vial vial)
     {
         m_gM.RemoveCurrentRecipe(vial.Colour);
         m_rend.material.color = Color.red;
-        m_currentVial.Invoke("DestroyVial", 3);
+        m_currentVial.DestroyVial();
     }   
 }
