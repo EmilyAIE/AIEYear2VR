@@ -160,4 +160,9 @@ public class Cauldron : MonoBehaviour
         EnterCookState(CookState.underCooked);
         m_isCooking = false;
     }
+
+    public int GetCookState()
+    {
+        return (int)m_currentCookState;
+    }
 }
