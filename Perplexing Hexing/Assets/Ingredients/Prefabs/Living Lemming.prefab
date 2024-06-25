@@ -341,7 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1430797293d465f4782ca12f14934459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Living Lemming
+  Name: Live Lemming
   m_deleteTime: 3
 --- !u!114 &1743751207743269513
 MonoBehaviour:
