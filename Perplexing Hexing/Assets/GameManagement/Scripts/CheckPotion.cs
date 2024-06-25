@@ -17,7 +17,7 @@ public class CheckPotion : MonoBehaviour
     {
         if(other.CompareTag("Vial"))
         {
-            m_currentVial = other.GetComponent<Vial>();
+            m_currentVial = other.GetComponentInParent<Vial>();
             if(m_currentVial.CorrectPotion)
             {
                 Success(m_currentVial);
