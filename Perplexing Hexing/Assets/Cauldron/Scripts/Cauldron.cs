@@ -56,6 +56,9 @@ public class Cauldron : MonoBehaviour
     {
         m_audioSource = GetComponent<AudioSource>();
         m_liquidRenderer = m_liquid.GetComponent<Renderer>();
+
+        //DEBUGGING DELETE LATER
+        UpdateCookText();
     }
 
     private void Update()
@@ -66,6 +69,7 @@ public class Cauldron : MonoBehaviour
             if(m_timer >= m_cookStateDuration)
             {
                 EnterCookState(m_currentCookState + 1);
+                m_timer = 0;
             }
         }       
     }
@@ -73,11 +77,7 @@ public class Cauldron : MonoBehaviour
     public void AddToMix(string ingredient)
     {
         m_currentIngredients.Add(ingredient);
-        m_ingredientListText.text = "";
-        for (int i = 0; i < m_currentIngredients.Count; i++)
-        {
-            m_ingredientListText.text += m_currentIngredients[i] + "\n";
-        }
+        UpdateCookText();
     }
 
     private void EnterCookState(CookState cookstate)
@@ -104,6 +104,7 @@ public class Cauldron : MonoBehaviour
                 m_isCooking = false;
                 break;
         }
+        UpdateCookText();
     }
 
     public void GetRecipe(Recipe recipe)
@@ -174,5 +175,16 @@ public class Cauldron : MonoBehaviour
     public int GetCookState()
     {
         return (int)m_currentCookState;
+    }
+
+    private void UpdateCookText()
+    {
+        m_ingredientListText.text = "";
+        m_ingredientListText.text = "Current Cook state: " + m_currentCookState + "\n";
+        m_ingredientListText.text += "Ingredients in pot:\n";
+        for (int i = 0; i < m_currentIngredients.Count; i++)
+        {
+            m_ingredientListText.text += m_currentIngredients[i] + "\n";
+        }
     }
 }
