@@ -194,18 +194,33 @@ MonoBehaviour:
   GreenCauldron: {fileID: 0}
   m_greenRecipeSpawnPos: {fileID: 7944973561393540097}
   GreenRecipePrefabs:
+  - {fileID: 5662898160133718121, guid: 2ba499a0255ac9e479c1e630f9b5adbb, type: 3}
+  - {fileID: 5821957240823288083, guid: 98f8bea4f0c494144a868621dccc9577, type: 3}
+  - {fileID: 7301382878505032257, guid: 93f7fa5137605f94eb333da0bc077662, type: 3}
   - {fileID: 8667214786562469983, guid: 6067b87ec63ec1742872ba949c8b15d7, type: 3}
   - {fileID: 7284178086760593118, guid: a42c6b62fbe568b4ab545ad4c28b4d78, type: 3}
+  - {fileID: 949651185309814808, guid: 0080ee0a21b6d7b46bbdf244ca41f8c2, type: 3}
+  - {fileID: 1320514269281482435, guid: 3e659389fa5f3394ab9a5a8341700499, type: 3}
   PurpleCauldron: {fileID: 0}
   m_purpleRecipeSpawnPos: {fileID: 1723704229425968574}
   PurpleRecipePrefabs:
+  - {fileID: 6232835967704401027, guid: 1048cf6925e7d1b4ca21ca6b06e9e5b2, type: 3}
   - {fileID: 693065951202947896, guid: 65d490ce7b6b1754b8aafdcbdc5ebe54, type: 3}
   - {fileID: 5637196902529861619, guid: 6f598080c261e9e49b7b396dd2ea4054, type: 3}
+  - {fileID: 5096390140989125249, guid: 84fbc544468aea7478d1bf5522100890, type: 3}
+  - {fileID: 9081999376846676338, guid: 82c3ef774396c8c42b60c71f6af1fece, type: 3}
+  - {fileID: 4651975824913009814, guid: d982b2bda73b98348a84d1ecc816bc17, type: 3}
+  - {fileID: 747086040112798390, guid: 03e92673d408b3d47b6936553fcdb496, type: 3}
   AmberCauldron: {fileID: 0}
   m_amberRecipeSpawnPos: {fileID: 3619075123057130758}
   AmberRecipePrefabs:
+  - {fileID: 2826218132156194665, guid: 392645b3102046442ac8649c2e9e40c6, type: 3}
+  - {fileID: 140371045777541342, guid: 0b10e9c1780437b469a96da6ae63a396, type: 3}
+  - {fileID: 2536333940420237092, guid: 2dfb6f79b5d6aef4085179aa802d5929, type: 3}
   - {fileID: 4075240148089594371, guid: 5d991379982080843a53e38491009121, type: 3}
+  - {fileID: 4267535648877289612, guid: f535362ef113e7349b65a4cbdcd4eb4e, type: 3}
   - {fileID: 520919175579883026, guid: 04e2dbb6101645f4498e33aa7faed3b4, type: 3}
+  - {fileID: 537232760584078237, guid: f0f91323935000e4dafe2fc88db971ad, type: 3}
 --- !u!1 &3619075123057130758
 GameObject:
   m_ObjectHideFlags: 0
