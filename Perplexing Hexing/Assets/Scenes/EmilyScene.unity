@@ -1793,6 +1793,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Frozen Tear
       objectReference: {fileID: 0}
+    - target: {fileID: 4963287157281118999, guid: 5b4cd067f56db5f4e86a6281eee9e27f, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 1757505680}
     - target: {fileID: 4963287157281119018, guid: 5b4cd067f56db5f4e86a6281eee9e27f, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2301,6 +2305,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2209136352590723814, guid: d65e06214f3e2dd4a88526d65f5860a1, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 1757505680}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d65e06214f3e2dd4a88526d65f5860a1, type: 3}
 --- !u!4 &664338759 stripped
@@ -3062,6 +3070,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Geo_I_MMushroom
       objectReference: {fileID: 0}
+    - target: {fileID: 1882953550919289584, guid: dc41f194cdd46554e8804365ae0b2a93, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 1757505680}
     - target: {fileID: 2137838982277868824, guid: dc41f194cdd46554e8804365ae0b2a93, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -3674,8 +3686,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_directionObject: {fileID: 185904740}
+  m_liquid: {fileID: 0}
   CorrectPotion: 1
   Colour: Green
+  AmberDefault: {fileID: 0}
+  AmberLight: {fileID: 0}
+  AmberMedium: {fileID: 0}
+  AmberWellDone: {fileID: 0}
+  GreenDefault: {fileID: 0}
+  GreenLight: {fileID: 0}
+  GreenMedium: {fileID: 0}
+  GreenWellDone: {fileID: 0}
+  PurpleDefault: {fileID: 0}
+  PurpleLight: {fileID: 0}
+  PurpleMedium: {fileID: 0}
+  PurpleWellDone: {fileID: 0}
 --- !u!1001 &1280605450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5482,6 +5507,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 354519138}
     m_Modifications:
+    - target: {fileID: 3666934519888291642, guid: 0a6d7e43164bf0d40bc2e5e0e27d7b79, type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
+      objectReference: {fileID: 0}
+    - target: {fileID: 3666934521038629101, guid: 0a6d7e43164bf0d40bc2e5e0e27d7b79, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3666934521816956631, guid: 0a6d7e43164bf0d40bc2e5e0e27d7b79, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 1757505680}
     - target: {fileID: 3848652409095726635, guid: 0a6d7e43164bf0d40bc2e5e0e27d7b79, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -5993,6 +6030,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5181114074430487210, guid: 414138a57196eef498dff1f4d64a3c18, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 1757505680}
     - target: {fileID: 5181114074430487215, guid: 414138a57196eef498dff1f4d64a3c18, type: 3}
       propertyPath: m_Name
       value: Bat Wing
@@ -6131,6 +6172,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2118141382755437191, guid: 9f56374e52474614b8ccfdb372dc3f15, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 1757505680}
     - target: {fileID: 2118141382755437192, guid: 9f56374e52474614b8ccfdb372dc3f15, type: 3}
       propertyPath: m_Name
       value: Moon Shard
@@ -6149,6 +6194,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1027522233}
     m_Modifications:
+    - target: {fileID: 5885571401992727354, guid: 71888f391fe6aa740b4f9f386476c115, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 1757505680}
     - target: {fileID: 6208064187433594461, guid: 71888f391fe6aa740b4f9f386476c115, type: 3}
       propertyPath: m_RootOrder
       value: 0
