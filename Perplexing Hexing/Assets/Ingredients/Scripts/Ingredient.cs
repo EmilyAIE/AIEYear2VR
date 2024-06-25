@@ -6,9 +6,14 @@ using UnityEngine;
 public class Ingredient : MonoBehaviour
 {
     public string Name;
-
+    IngredientSpawnDetatch m_spawnDetatch;
     [SerializeField]
-    float m_deleteTime;    
+    float m_deleteTime;
+
+    public void Start()
+    {
+        m_spawnDetatch = GetComponent<IngredientSpawnDetatch>();
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -28,6 +33,6 @@ public class Ingredient : MonoBehaviour
 
     void DestroyIngredient()
     {
-        Destroy(gameObject);
+        m_spawnDetatch.Deactivate();
     }
 }
