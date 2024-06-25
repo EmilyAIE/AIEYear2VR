@@ -16,7 +16,7 @@ public class CauldronCollider : MonoBehaviour
     {
         if (collider.CompareTag("Vial"))
         {
-            Vial vial = collider.GetComponent<Vial>();
+            Vial vial = collider.GetComponentInParent<Vial>();
             if(vial.CheckOrientation())
             {
                 vial.Colour = m_cauldron.Colour.ToString();
