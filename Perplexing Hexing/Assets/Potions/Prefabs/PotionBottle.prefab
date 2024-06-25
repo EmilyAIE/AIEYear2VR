@@ -50,7 +50,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4281397253642793444
 Transform:
   m_ObjectHideFlags: 0
@@ -159,9 +159,10 @@ GameObject:
   - component: {fileID: 1878600627194814993}
   - component: {fileID: 1878600627194814994}
   - component: {fileID: 2600961041919844254}
+  - component: {fileID: 388221922664660653}
   m_Layer: 0
   m_Name: PotionBottle
-  m_TagString: Untagged
+  m_TagString: Vial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -312,10 +313,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 388221922664660653}
+        m_TargetAssemblyTypeName: IngredientSpawnDetatch, Assembly-CSharp
+        m_MethodName: DetatchFromParent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 388221922664660653}
+        m_TargetAssemblyTypeName: IngredientSpawnDetatch, Assembly-CSharp
+        m_MethodName: DetatchFromParent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -442,3 +467,15 @@ MonoBehaviour:
   PurpleLight: {fileID: 2100000, guid: 9d725dadf704ed74e869b505c9f9fbeb, type: 2}
   PurpleMedium: {fileID: 2100000, guid: 55227c1f5fa4eb447b5dcb72d925b73d, type: 2}
   PurpleWellDone: {fileID: 2100000, guid: eed632452a9a789409738c28241b6600, type: 2}
+--- !u!114 &388221922664660653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4281397253646210361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad63aa7c3203d9498b1344d1283a395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

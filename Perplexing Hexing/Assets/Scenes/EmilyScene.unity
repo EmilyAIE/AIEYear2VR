@@ -6348,10 +6348,6 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1757505680}
-    - target: {fileID: 4281397253642793448, guid: a5a9cb86a0b13104d9423f236e9196a1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4281397253646210357, guid: a5a9cb86a0b13104d9423f236e9196a1, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -6399,10 +6395,6 @@ PrefabInstance:
     - target: {fileID: 4281397253646210361, guid: a5a9cb86a0b13104d9423f236e9196a1, type: 3}
       propertyPath: m_Name
       value: PotionBottle
-      objectReference: {fileID: 0}
-    - target: {fileID: 4281397253646210361, guid: a5a9cb86a0b13104d9423f236e9196a1, type: 3}
-      propertyPath: m_TagString
-      value: Vial
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5a9cb86a0b13104d9423f236e9196a1, type: 3}
