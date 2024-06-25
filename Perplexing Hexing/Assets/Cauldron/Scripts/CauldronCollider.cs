@@ -22,6 +22,7 @@ public class CauldronCollider : MonoBehaviour
             {
                 vial.Colour = m_cauldron.Colour.ToString();
                 vial.CorrectPotion = m_cauldron.CompareRecipe();
+                vial.SetLiquid(m_cauldron.GetCookState());
             }
             Debug.Log("I AM A VIAL AND IM FULL OF " + vial.Colour + " JUICE");
         }
