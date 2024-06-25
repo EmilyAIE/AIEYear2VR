@@ -159,6 +159,7 @@ GameObject:
   - component: {fileID: 1878600627194814993}
   - component: {fileID: 1878600627194814994}
   - component: {fileID: 2600961041919844254}
+  - component: {fileID: -2091473855001246911}
   m_Layer: 0
   m_Name: PotionBottle
   m_TagString: Untagged
@@ -442,3 +443,15 @@ MonoBehaviour:
   PurpleLight: {fileID: 2100000, guid: 9d725dadf704ed74e869b505c9f9fbeb, type: 2}
   PurpleMedium: {fileID: 2100000, guid: 55227c1f5fa4eb447b5dcb72d925b73d, type: 2}
   PurpleWellDone: {fileID: 2100000, guid: eed632452a9a789409738c28241b6600, type: 2}
+--- !u!114 &-2091473855001246911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4281397253646210361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad63aa7c3203d9498b1344d1283a395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

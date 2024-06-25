@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,9 @@ public class Vial : MonoBehaviour
     private GameObject m_liquid;
     public bool CorrectPotion = false;
     public string Colour;
+    private RegenIngredient m_regen;
+    [SerializeField]
+    float m_deleteTime;
 
     public Material AmberDefault;
     public Material AmberLight;
@@ -49,7 +53,23 @@ public class Vial : MonoBehaviour
         }
         return false;
     }
-    
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "BadSurface")
+        {
+            Invoke("DestroyVial", m_deleteTime);
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "BadSurface")
+        {
+            CancelInvoke("DestroyVial");
+        }
+    }
+
     public void SetLiquid(int cookStateEnum)
     {
         m_liquid.SetActive(true);
@@ -117,9 +137,11 @@ public class Vial : MonoBehaviour
                 }
                 break;
         }
-        
-        
-        
+    }
 
+    public void DestroyVial()
+    {
+        m_liquid.SetActive(false);
+        m_regen.SetInactive(gameObject);
     }
 }
