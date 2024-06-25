@@ -31,7 +31,7 @@ public class Ingredient : MonoBehaviour
         }
     }
 
-    void DestroyIngredient()
+    public void DestroyIngredient()
     {
         m_spawnDetatch.Deactivate();
     }
