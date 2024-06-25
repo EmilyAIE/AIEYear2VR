@@ -115,8 +115,9 @@ public class GameManager : MonoBehaviour
         string color;
         int randomInt = Random.Range(0, m_inactiveColors.Count);
         color = m_inactiveColors[randomInt];
+        m_inactiveColors.RemoveAt(randomInt);
         m_activeColors.Add(color);
-        m_inactiveColors.Remove(color);        
+                
         return color;
     }
 }
