@@ -114,14 +114,19 @@ public class Cauldron : MonoBehaviour
 
     public bool CompareRecipe()
     {
-        m_targetIngredients = m_activeRecipe.Ingredients;
+        for(int i = 0; i < m_activeRecipe.Ingredients.Count; i++)
+        {
+            m_targetIngredients.Add(m_activeRecipe.Ingredients[i]);
+        }        
         //if the cook state is incorrect, or if the number of ingredients is incorrect, recipe has failed
         if ((int)m_activeRecipe.CookState != (int)m_currentCookState)
         {
+            Debug.Log("Incorrect Cook State");
             return false;
         }
         if (m_currentIngredients.Count != m_targetIngredients.Count)
         {
+            Debug.Log("Incorrect Number of Ingredients");
             return false;
         }
         //Compare ingredients in cauldron to ingredients on recipe 
@@ -135,14 +140,19 @@ public class Cauldron : MonoBehaviour
                     m_targetIngredients.RemoveAt(j);
                     break;
                 }
-                //if the current ingredient cannot be found in the target ingredients list, the recipe has failed
+                //if the current ingredient cannot be found in the target ingredients list, the recipe has failed                
                 else if (i == m_currentIngredients.Count - 1)
+                {
+                    Debug.Log("Incorrect Ingredient");
                     return false;
+                }
+                    
             }
         }
         //If there are ingredients left in the target ingredients list, the recipe has failed
         if(m_targetIngredients.Count > 0)
         {
+            Debug.Log("Not Enough Ingredients");
             return false;
         }
         //if cauldron has not failed any checks, return true
