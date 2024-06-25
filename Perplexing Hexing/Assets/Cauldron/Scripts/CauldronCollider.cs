@@ -19,12 +19,23 @@ public class CauldronCollider : MonoBehaviour
             Vial vial = collider.GetComponent<Vial>();
             if(vial.CheckOrientation())
             {
+                vial.Colour = m_cauldron.Colour.ToString();
                 vial.CorrectPotion = m_cauldron.CompareRecipe();
+                vial.SetLiquid(m_cauldron.GetCookState());
+                if(vial.CorrectPotion)
+                {
+                    Debug.Log("Potion Is Correct");
+                }
+                else
+                {
+                    Debug.Log("Potion Is Incorrect");
+                }
+                m_cauldron.StopCooking();
             }            
         }
         if(collider.CompareTag("Ingredient"))
-        {
-            Ingredient ingredient = collider.GetComponent<Ingredient>();
+        {            
+            Ingredient ingredient = collider.GetComponentInParent<Ingredient>();
             m_cauldron.AddToMix(ingredient.Name);
             Destroy(ingredient.gameObject);
         }

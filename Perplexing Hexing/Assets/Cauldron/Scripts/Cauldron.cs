@@ -2,9 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using TMPro;
 
 public class Cauldron : MonoBehaviour
 {
+
+    //CANVAS STUFF FOR DEBUGGING
+    [SerializeField]
+    TextMeshProUGUI m_ingredientListText;
+
     //Andrew's actual code
     float m_timer;
     [SerializeField]
@@ -23,12 +29,13 @@ public class Cauldron : MonoBehaviour
     GameObject m_liquid;    
     Renderer m_liquidRenderer;
 
-    public enum Color 
+    public enum Colours
     { 
         Green,
         Purple,
         Amber
-    }    
+    }
+    public Colours Colour;
 
     [Header("Materials for Cooked State")]
     [SerializeField] Material m_default;
@@ -40,8 +47,8 @@ public class Cauldron : MonoBehaviour
 
     private Recipe m_activeRecipe;
     
-    private List<string> m_currentIngredients;
-    private List<string> m_targetIngredients;
+    private List<string> m_currentIngredients = new List<string>();
+    private List<string> m_targetIngredients = new List<string>();
 
     private bool m_isCooking;
 
@@ -49,6 +56,9 @@ public class Cauldron : MonoBehaviour
     {
         m_audioSource = GetComponent<AudioSource>();
         m_liquidRenderer = m_liquid.GetComponent<Renderer>();
+
+        //DEBUGGING DELETE LATER
+        UpdateCookText();
     }
 
     private void Update()
@@ -59,6 +69,7 @@ public class Cauldron : MonoBehaviour
             if(m_timer >= m_cookStateDuration)
             {
                 EnterCookState(m_currentCookState + 1);
+                m_timer = 0;
             }
         }       
     }
@@ -66,6 +77,7 @@ public class Cauldron : MonoBehaviour
     public void AddToMix(string ingredient)
     {
         m_currentIngredients.Add(ingredient);
+        UpdateCookText();
     }
 
     private void EnterCookState(CookState cookstate)
@@ -92,6 +104,7 @@ public class Cauldron : MonoBehaviour
                 m_isCooking = false;
                 break;
         }
+        UpdateCookText();
     }
 
     public void GetRecipe(Recipe recipe)
@@ -101,14 +114,19 @@ public class Cauldron : MonoBehaviour
 
     public bool CompareRecipe()
     {
-        m_targetIngredients = m_activeRecipe.Ingredients;
+        for(int i = 0; i < m_activeRecipe.Ingredients.Count; i++)
+        {
+            m_targetIngredients.Add(m_activeRecipe.Ingredients[i]);
+        }        
         //if the cook state is incorrect, or if the number of ingredients is incorrect, recipe has failed
         if ((int)m_activeRecipe.CookState != (int)m_currentCookState)
         {
+            Debug.Log("Incorrect Cook State");
             return false;
         }
         if (m_currentIngredients.Count != m_targetIngredients.Count)
         {
+            Debug.Log("Incorrect Number of Ingredients");
             return false;
         }
         //Compare ingredients in cauldron to ingredients on recipe 
@@ -122,14 +140,19 @@ public class Cauldron : MonoBehaviour
                     m_targetIngredients.RemoveAt(j);
                     break;
                 }
-                //if the current ingredient cannot be found in the target ingredients list, the recipe has failed
+                //if the current ingredient cannot be found in the target ingredients list, the recipe has failed                
                 else if (i == m_currentIngredients.Count - 1)
+                {
+                    Debug.Log("Incorrect Ingredient");
                     return false;
+                }
+                    
             }
         }
         //If there are ingredients left in the target ingredients list, the recipe has failed
         if(m_targetIngredients.Count > 0)
         {
+            Debug.Log("Not Enough Ingredients");
             return false;
         }
         //if cauldron has not failed any checks, return true
@@ -145,9 +168,25 @@ public class Cauldron : MonoBehaviour
     {
         m_timer = 0;
         m_targetIngredients.Clear();
+        m_currentIngredients.Clear();
         EnterCookState(CookState.underCooked);
         m_isCooking = false;
+        UpdateCookText();
     }
 
+    public int GetCookState()
+    {
+        return (int)m_currentCookState;
+    }
 
+    private void UpdateCookText()
+    {
+        m_ingredientListText.text = "";
+        m_ingredientListText.text = "Current Cook state: " + m_currentCookState + "\n";
+        m_ingredientListText.text += "Ingredients in pot:\n";
+        for (int i = 0; i < m_currentIngredients.Count; i++)
+        {
+            m_ingredientListText.text += m_currentIngredients[i] + "\n";
+        }
+    }
 }

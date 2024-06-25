@@ -6,10 +6,12 @@ public class CheckPotion : MonoBehaviour
 {
     GameManager m_gM;
     Vial m_currentVial;
+    Renderer m_rend;
 
     private void Start()
     {
-        m_gM = GetComponentInParent<GameManager>();   
+        m_gM = GetComponentInParent<GameManager>();
+        m_rend = GetComponent<Renderer>();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -22,19 +24,22 @@ public class CheckPotion : MonoBehaviour
             }
             else
             {
-                Fail();
+                Fail(m_currentVial);
             }
         }
     }
 
     public void Success(Vial vial)
     {
+        m_rend.material.color = Color.green;
         m_gM.RemoveCurrentRecipe(vial.Colour);
         Invoke("DestroyVial", 3);
     }
 
-    public void Fail()
+    public void Fail(Vial vial)
     {
+        m_gM.RemoveCurrentRecipe(vial.Colour);
+        m_rend.material.color = Color.red;
         Invoke("DestroyVial", 3);
     }
 

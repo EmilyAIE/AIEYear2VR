@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 221959133244114500}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.52959275, y: 1.123, z: -0.691}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.25, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 243149666780046705}
@@ -115,10 +115,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_cookStateDuration: 3
   m_liquid: {fileID: 2471468337397704476}
-  m_default: {fileID: 2100000, guid: 1876a1106c4dca840b322cd85dcb7162, type: 2}
-  m_light: {fileID: 2100000, guid: 9772417259351324fb36de0c55343e0b, type: 2}
-  m_medium: {fileID: 2100000, guid: fbf1ef2870bac434a85de9291eb0e0c0, type: 2}
-  m_wellDone: {fileID: 2100000, guid: 5eeea8ca606c365449523e5624cc70b0, type: 2}
+  m_default: {fileID: 2100000, guid: 7ff8cf325eb303245ad133ebcf465234, type: 2}
+  m_light: {fileID: 2100000, guid: eacd90ae628a0b44386912da4ada3913, type: 2}
+  m_medium: {fileID: 2100000, guid: e5d28a9c01b191547942af1e80e69e09, type: 2}
+  m_wellDone: {fileID: 2100000, guid: ecbe2d41558538744bbbfebb16fc15c6, type: 2}
 --- !u!1 &2471468337397704476
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +181,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1876a1106c4dca840b322cd85dcb7162, type: 2}
+  - {fileID: 2100000, guid: 7ff8cf325eb303245ad133ebcf465234, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -315,7 +315,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6958665536021300740}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.49, y: -0.548, z: 0}
+  m_LocalPosition: {x: 0.386, y: -0.548, z: 0.415}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -380,7 +380,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6958665536021300740}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
