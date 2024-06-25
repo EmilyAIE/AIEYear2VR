@@ -97,7 +97,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _Fill: 0.5
+    - _Fill: 0.562
     - _FresnelPower: 5
     - _FresnelStrength: 2
     - _GlossMapScale: 0
