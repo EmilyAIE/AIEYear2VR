@@ -175,7 +175,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4281397253646210361}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.87271565, y: 0.841, z: -0.798}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -455,6 +455,7 @@ MonoBehaviour:
   m_liquid: {fileID: 4281397253642793448}
   CorrectPotion: 0
   Colour: 
+  m_deleteTime: 0
   AmberDefault: {fileID: 2100000, guid: 704eebaff492d5a4192f92c8d0f488ff, type: 2}
   AmberLight: {fileID: 2100000, guid: e9b847efbb14732419f064e4a9a9d013, type: 2}
   AmberMedium: {fileID: 2100000, guid: 2fa2435744ba14142957f78780387533, type: 2}
