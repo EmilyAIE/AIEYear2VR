@@ -65,5 +65,6 @@ public class RegenIngredient : MonoBehaviour
     {
         activeObject.SetActive(false);
         activeObject.transform.parent = InactiveObjects.transform;
+        activeObject.transform.position = InactiveObjects.transform.position;
     }
 }
