@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a947b7e209c9054cac98f3425f60af6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RecipeData: {fileID: 0}
+  RecipeData: {fileID: 11400000, guid: 39fb9c8009a1dfa41aa5ad78665df6d1, type: 2}
   m_title: {fileID: 949651186482550210}
   m_cookState: {fileID: 949651185716222441}
   m_color: {fileID: 949651186444293049}
