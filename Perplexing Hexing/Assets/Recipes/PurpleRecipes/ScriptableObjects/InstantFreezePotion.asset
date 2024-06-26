@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baceccc39b217874eb0686c7a2f549ff, type: 3}
   m_Name: InstantFreezePotion
   m_EditorClassIdentifier: 
-  Title: Instant Freez Potion
+  Title: Instant Freeze Potion
   Colour: 1
   CookState: 1
-  Ingredients: []
+  Ingredients:
+  - Frozen Tear
+  - Frozen Tear
+  - Moon Shard
   IngredientSelect: 070000000700000004000000
-  Color: Green
+  Color: Purple

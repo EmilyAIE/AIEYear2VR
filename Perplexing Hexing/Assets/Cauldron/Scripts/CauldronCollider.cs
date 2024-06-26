@@ -16,7 +16,7 @@ public class CauldronCollider : MonoBehaviour
     {
         if (collider.CompareTag("Vial"))
         {
-            Vial vial = collider.GetComponent<Vial>();
+            Vial vial = collider.GetComponentInParent<Vial>();
             if(vial.CheckOrientation())
             {
                 vial.Colour = m_cauldron.Colour.ToString();
@@ -37,7 +37,7 @@ public class CauldronCollider : MonoBehaviour
         {            
             Ingredient ingredient = collider.GetComponentInParent<Ingredient>();
             m_cauldron.AddToMix(ingredient.Name);
-            Destroy(ingredient.gameObject);
+            ingredient.DestroyIngredient();
         }
     }
 }
