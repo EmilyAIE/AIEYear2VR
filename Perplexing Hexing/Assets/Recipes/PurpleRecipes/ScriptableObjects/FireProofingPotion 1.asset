@@ -7,15 +7,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: baceccc39b217874eb0686c7a2f549ff, type: 3}
-  m_Name: FireProofingPotion
+  m_Name: FireProofingPotion 1
   m_EditorClassIdentifier: 
   Title: Fire Proofing Potion
   Colour: 1
   CookState: 3
   Ingredients:
-  - 
+  - Eye Of Newt
+  - Magic Mushroom
+  - Snake Tongue
   IngredientSelect: 010000000200000003000000
-  Color: Green
+  Color: Purple
