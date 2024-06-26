@@ -56,7 +56,7 @@ Material:
     - _Noise_Strength: 1
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Smoothness_Float: 0.856
+    - _Smoothness_Float: 0.884
     - _Use_Smoothness_Map: 0
     m_Colors:
     - _Base_Color: {r: 1, g: 0.514151, b: 0.514151, a: 0}

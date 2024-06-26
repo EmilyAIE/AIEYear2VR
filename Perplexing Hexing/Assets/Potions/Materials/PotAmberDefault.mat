@@ -97,7 +97,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _Fill: 0.562
+    - _Fill: 0.71
     - _FresnelPower: 5
     - _FresnelStrength: 2
     - _GlossMapScale: 0
@@ -117,8 +117,8 @@ Material:
     - _SrcBlend: 1
     - _Surface: 0
     - _WaveSpeed: -0.1
-    - _WaveStrength: 1
-    - _WobbleAmount: 0.5
+    - _WaveStrength: 0.3
+    - _WobbleAmount: 0.3
     - _WobbleX: 0
     - _WobbleZ: 0
     - _WorkflowMode: 1
