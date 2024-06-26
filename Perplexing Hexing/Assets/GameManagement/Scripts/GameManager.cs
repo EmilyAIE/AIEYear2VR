@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
             {
                 m_timer = 0;
                 GenerateRecipe(SelectRecipeColor());
-                if (m_activeColors.Count == 3)
+                if (m_inactiveColors.Count == 0)
                     m_allColorsActive = true;
             }
         }
