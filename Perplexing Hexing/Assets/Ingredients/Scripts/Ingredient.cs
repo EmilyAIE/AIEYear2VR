@@ -20,7 +20,7 @@ public class Ingredient : MonoBehaviour
     {
         if (collision.gameObject.tag == "BadSurface")
         {
-            Invoke("DestroyIngredient", m_deleteTime);
+            Invoke("StartDestroyIngredient", m_deleteTime);
         }
     }
 
@@ -28,20 +28,20 @@ public class Ingredient : MonoBehaviour
     {
         if (collision.gameObject.tag == "BadSurface")
         {
-            CancelInvoke("DestroyIngredient");
+            CancelInvoke("StartDestroyIngredient");
         }
     }
 
     public void DestroyIngredient()
     {
-        Disolve disolve = GetComponent<Disolve>();
-        disolve.DisolveOut();
-        
-        Invoke("ActuallyDestroyIngredient", m_disolveTime);
+        m_spawnDetatch.Deactivate();
     }
 
-    void ActuallyDestroyIngredient()
+    void StartDestroyIngredient()
     {
-        m_spawnDetatch.Deactivate();
+        Disolve disolve = GetComponent<Disolve>();
+        disolve.DisolveOut();
+
+        Invoke("DestroyIngredient", m_disolveTime);
     }
 }
