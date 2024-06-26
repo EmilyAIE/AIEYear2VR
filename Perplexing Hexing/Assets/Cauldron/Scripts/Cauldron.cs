@@ -141,7 +141,7 @@ public class Cauldron : MonoBehaviour
                     break;
                 }
                 //if the current ingredient cannot be found in the target ingredients list, the recipe has failed                
-                else if (i == m_currentIngredients.Count - 1)
+                else if (j == m_targetIngredients.Count - 1)
                 {
                     Debug.Log("Incorrect Ingredient");
                     return false;
@@ -168,8 +168,10 @@ public class Cauldron : MonoBehaviour
     {
         m_timer = 0;
         m_targetIngredients.Clear();
+        m_currentIngredients.Clear();
         EnterCookState(CookState.underCooked);
         m_isCooking = false;
+        UpdateCookText();
     }
 
     public int GetCookState()

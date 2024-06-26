@@ -39,8 +39,7 @@ public class GameManager : MonoBehaviour
 
     private List<string> m_activeColors = new List<string> { };
     private List<string> m_inactiveColors = new List<string> { "Green", "Purple", "Amber" };
-
-    float Timer = 0;
+        
     public void Update()
     {         
         if(!m_allColorsActive)
@@ -115,8 +114,9 @@ public class GameManager : MonoBehaviour
         string color;
         int randomInt = Random.Range(0, m_inactiveColors.Count);
         color = m_inactiveColors[randomInt];
+        m_inactiveColors.RemoveAt(randomInt);
         m_activeColors.Add(color);
-        m_inactiveColors.Remove(color);        
+                
         return color;
     }
 }

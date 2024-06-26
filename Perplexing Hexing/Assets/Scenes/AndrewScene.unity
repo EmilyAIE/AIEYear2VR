@@ -155,8 +155,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90f02c7834ab5784e8930e38d82da9ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_ingredientListText: {fileID: 0}
   m_cookStateDuration: 0
   m_liquid: {fileID: 0}
+  Colour: 0
   m_default: {fileID: 0}
   m_light: {fileID: 0}
   m_medium: {fileID: 0}
@@ -564,8 +566,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90f02c7834ab5784e8930e38d82da9ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_ingredientListText: {fileID: 0}
   m_cookStateDuration: 0
   m_liquid: {fileID: 0}
+  Colour: 0
   m_default: {fileID: 0}
   m_light: {fileID: 0}
   m_medium: {fileID: 0}

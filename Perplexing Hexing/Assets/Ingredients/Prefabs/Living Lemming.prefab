@@ -31,7 +31,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1326596097259211867}
-  m_LocalRotation: {x: -0, y: 0.79547447, z: -0, w: 0.60598713}
+  m_LocalRotation: {x: 0, y: 0.7954735, z: 0, w: 0.60598844}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.39370078, y: 0.39370078, z: 0.39370078}
   m_ConstrainProportionsScale: 0
@@ -328,6 +328,7 @@ MonoBehaviour:
   - Mistah White
   - Peter Griffen
   - Horse
+  - Jerma
   m_nameText: {fileID: 2209136351814801424}
 --- !u!114 &4200376065868681032
 MonoBehaviour:
@@ -341,7 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1430797293d465f4782ca12f14934459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Living Lemming
+  Name: Live Lemming
   m_deleteTime: 3
 --- !u!114 &1743751207743269513
 MonoBehaviour:

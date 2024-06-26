@@ -110,7 +110,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _Fill: 0.5
+    - _Fill: 0.562
     - _FresnelPower: 5
     - _FresnelStrength: 2
     - _GlossMapScale: 0
@@ -141,7 +141,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HighlightColor: {r: 1, g: 0.6470588, b: 0.699567, a: 0}
-    - _SideColor: {r: 0.735849, g: 0.02429692, b: 0.22338095, a: 0}
+    - _SideColor: {r: 0.18912734, g: 0.7372549, b: 0.02352941, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _TopColor: {r: 1, g: 0.43867916, b: 0.57336026, a: 0}
+    - _TopColor: {r: 0.60222775, g: 1, b: 0.43921566, a: 0}
   m_BuildTextureStacks: []

@@ -108,6 +108,8 @@ GameObject:
   - component: {fileID: 6081368194847780361}
   - component: {fileID: 4874242277454656177}
   - component: {fileID: 4874242277454656142}
+  - component: {fileID: -920429117747342894}
+  - component: {fileID: 8223799256393278697}
   m_Layer: 0
   m_Name: Snakes Tongue
   m_TagString: Ingredient
@@ -139,7 +141,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5721155197920415708}
-  m_Mesh: {fileID: 4641556517558854058, guid: f1440fae787fca540bed19475c26c169, type: 3}
+  m_Mesh: {fileID: 472892044936876793, guid: 43327c42a36ec864e9dd1703c318acd0, type: 3}
 --- !u!23 &6081368194847780361
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -160,7 +162,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5785545367559510918, guid: f1440fae787fca540bed19475c26c169, type: 3}
+  - {fileID: 2100000, guid: 292f2d0bd112e044680258b2f2275433, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -248,10 +250,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8223799256393278697}
+        m_TargetAssemblyTypeName: IngredientSpawnDetatch, Assembly-CSharp
+        m_MethodName: DetatchFromParent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8223799256393278697}
+        m_TargetAssemblyTypeName: IngredientSpawnDetatch, Assembly-CSharp
+        m_MethodName: DetatchFromParent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -350,6 +376,32 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &-920429117747342894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5721155197920415708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1430797293d465f4782ca12f14934459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Snake Tongue
+  m_deleteTime: 3
+--- !u!114 &8223799256393278697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5721155197920415708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad63aa7c3203d9498b1344d1283a395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6447849967244008928
 GameObject:
   m_ObjectHideFlags: 0
