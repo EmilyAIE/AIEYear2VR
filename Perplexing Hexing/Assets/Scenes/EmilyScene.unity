@@ -4424,10 +4424,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_System: {fileID: 1649889229}
-  m_TurnAmount: 45
+  m_TurnAmount: 22.5
   m_DebounceTime: 0.5
   m_EnableTurnLeftRight: 1
-  m_EnableTurnAround: 1
+  m_EnableTurnAround: 0
   m_DelayTime: 0
   m_LeftHandSnapTurnAction:
     m_UseReference: 0
