@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baceccc39b217874eb0686c7a2f549ff, type: 3}
   m_Name: FireProofingPotion 1
   m_EditorClassIdentifier: 
-  Title: 
-  Colour: 0
-  CookState: 0
-  Ingredients: []
-  IngredientSelect: 
-  Color: Green
+  Title: Fire Proofing Potion
+  Colour: 1
+  CookState: 3
+  Ingredients:
+  - Eye Of Newt
+  - Magic Mushroom
+  - Snake Tongue
+  IngredientSelect: 010000000200000003000000
+  Color: Purple
