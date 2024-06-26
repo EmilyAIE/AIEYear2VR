@@ -84,7 +84,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &6255810531128488555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a947b7e209c9054cac98f3425f60af6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_recipeData: {fileID: 0}
+  RecipeData: {fileID: 0}
   m_title: {fileID: 6255810532238309299}
   m_cookState: {fileID: 6255810532633279384}
   m_color: {fileID: 6255810532275548616}

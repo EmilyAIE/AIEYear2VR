@@ -13,10 +13,11 @@ public class RecipeDisplay : MonoBehaviour
     public GameObject IngredientDisplayPrefab; 
 
     private void Start()
-    {        
+    {
+        RecipeData.Activate();
         m_title.text = RecipeData.Title;
         m_cookState.text = "Duration: " + RecipeData.CookState.ToString();
-        m_color.text = "Colour: " + RecipeData.Color;
+        m_color.text = "Colour: " + RecipeData.Color;        
 
         for(int i = 0; i < RecipeData.Ingredients.Count; i++)
         {
