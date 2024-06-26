@@ -9,6 +9,7 @@ public class Ingredient : MonoBehaviour
     IngredientSpawnDetatch m_spawnDetatch;
     [SerializeField]
     float m_deleteTime;
+    float m_disolveTime = 2f;
 
     public void Start()
     {
@@ -32,6 +33,14 @@ public class Ingredient : MonoBehaviour
     }
 
     public void DestroyIngredient()
+    {
+        Disolve disolve = GetComponent<Disolve>();
+        disolve.DisolveOut();
+        
+        Invoke("ActuallyDestroyIngredient", m_disolveTime);
+    }
+
+    void ActuallyDestroyIngredient()
     {
         m_spawnDetatch.Deactivate();
     }
