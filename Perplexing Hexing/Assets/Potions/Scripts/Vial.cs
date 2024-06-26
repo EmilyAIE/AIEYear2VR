@@ -12,6 +12,7 @@ public class Vial : MonoBehaviour
     private GameObject m_liquid;
     public bool CorrectPotion = false;
     public string Colour;
+    [SerializeField]
     private RegenIngredient m_regen;
     [SerializeField]
     float m_deleteTime;
@@ -42,6 +43,7 @@ public class Vial : MonoBehaviour
     private void Start()
     {
         m_gameObject = gameObject;
+        m_regen = GetComponentInParent<RegenIngredient>();
     }
     public bool CheckOrientation()
     {
