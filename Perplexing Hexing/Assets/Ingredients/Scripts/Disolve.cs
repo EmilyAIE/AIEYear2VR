@@ -12,10 +12,13 @@ public class Disolve : MonoBehaviour
     private Vector2 DisolveRange = new(0, 1.5f);
     private float disolveDuration = 2f;
 
+    public bool hasDisolved = false;
+
     private void OnEnable()
     {
         mat = GetComponent<Renderer>().material;
         particles = GetComponent<ParticleSystem>();
+        mat.SetFloat("_Cutoff_Height", 0f);
         DisolveIn();
     }
 
@@ -29,19 +32,26 @@ public class Disolve : MonoBehaviour
     {
         Tween.ShaderFloat(mat, "_Cutoff_Height", DisolveRange.x, disolveDuration, 0, disolveOutTween);
         particles.Play();
+        Invoke("SetDisolved", disolveDuration);
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            DisolveOut();
-        }
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    DisolveOut();
+        //}
+        //
+        //if (Input.GetMouseButtonDown(1))
+        //{
+        //    DisolveIn();
+        //}
+    }
 
-        if (Input.GetMouseButtonDown(1))
-        {
-            DisolveIn();
-        }
+    void SetDisolved()
+    {
+        hasDisolved = true;
+
     }
 
 
