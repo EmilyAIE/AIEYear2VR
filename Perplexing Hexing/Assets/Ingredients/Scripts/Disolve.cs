@@ -16,7 +16,7 @@ public class Disolve : MonoBehaviour
     {
         mat = GetComponent<Renderer>().material;
         particles = GetComponent<ParticleSystem>();
-        DisolveIn();
+        //DisolveIn();
     }
 
     public void DisolveIn()
