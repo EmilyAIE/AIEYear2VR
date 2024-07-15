@@ -27,6 +27,7 @@ public class Recipe : ScriptableObject
         FrozenTear,
         WrappedCandy
     }
+
     [HideInInspector]
     public List<string> Ingredients;
     public List<Ingredient> IngredientSelect;
