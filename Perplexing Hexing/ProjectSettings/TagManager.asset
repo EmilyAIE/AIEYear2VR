@@ -7,6 +7,8 @@ TagManager:
   - BadSurface
   - Vial
   - Ingredient
+  - InSpline
+  - OutSpline
   layers:
   - Default
   - TransparentFX
