@@ -75,9 +75,9 @@ Material:
     - _RippleSpeed: 0.17
     - _Smoothness: 0.8
     - _WaveHeight: 0.04
-    - _WaveLength: 0.5
-    - _WaveSpeed: 0.2
-    - _WaveSteepness: 0.1
+    - _WaveLength: 0.15
+    - _WaveSpeed: 0.1
+    - _WaveSteepness: 0.08
     m_Colors:
     - _LiquidColor: {r: 0.57075465, g: 1, b: 0.7601411, a: 0}
     - _LiquidColorCenter: {r: 0.70273125, g: 0.37254906, b: 1, a: 0}
