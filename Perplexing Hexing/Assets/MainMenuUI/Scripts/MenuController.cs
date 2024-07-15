@@ -7,6 +7,12 @@ public class MenuController : MonoBehaviour
     [SerializeField]
     GameObject m_mainScreen, m_controls, m_tutorial;
 
+    [SerializeField]
+    GameObject[] m_tutPages;
+
+    [SerializeField]
+    GameObject m_nextButton, m_prevButton;
+
     // Start is called before the first frame update
     void Start()
     {
