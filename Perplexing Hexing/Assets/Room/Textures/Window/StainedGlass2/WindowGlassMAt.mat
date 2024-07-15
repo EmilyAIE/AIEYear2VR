@@ -67,10 +67,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _EmissionStrength: 3.44
+    - _EmissionStrength: 3.4
     - _NormalStrength: 1
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _SmoothnessStrength: 0.546
     - _UseEmisionTexture: 1
     - _UseMetallicMap: 1
     m_Colors: []
