@@ -15,15 +15,7 @@ public class Cauldron : MonoBehaviour
     float m_timer;
     [SerializeField]
     float m_cookStateDuration;
-    AudioSource m_audioSource;
-    public enum CookState
-    {
-        underCooked,
-        light,
-        medium,
-        wellDone,
-        overCooked,
-    }
+    AudioSource m_audioSource;    
 
     [SerializeField]
     GameObject m_liquid;    
@@ -119,7 +111,7 @@ public class Cauldron : MonoBehaviour
             m_targetIngredients.Add(m_activeRecipe.Ingredients[i]);
         }        
         //if the cook state is incorrect, or if the number of ingredients is incorrect, recipe has failed
-        if ((int)m_activeRecipe.CookState != (int)m_currentCookState)
+        if (m_activeRecipe.cookState != m_currentCookState)
         {
             Debug.Log("Incorrect Cook State");
             return false;
@@ -174,15 +166,15 @@ public class Cauldron : MonoBehaviour
         UpdateCookText();
     }
 
-    public int GetCookState()
+    public CookState GetCookState()
     {
-        return (int)m_currentCookState;
+        return m_currentCookState;
     }
 
     private void UpdateCookText()
     {
         m_ingredientListText.text = "";
-        m_ingredientListText.text = "Current Cook state: " + m_currentCookState + "\n";
+        m_ingredientListText.text = "Current Cook state: " + m_currentCookState.ToString() + "\n";
         m_ingredientListText.text += "Ingredients in pot:\n";
         for (int i = 0; i < m_currentIngredients.Count; i++)
         {

@@ -29,15 +29,7 @@ public class Vial : MonoBehaviour
     public Material PurpleLight;
     public Material PurpleMedium;
     public Material PurpleWellDone;
-
-    public enum CookState
-    {
-        underCooked,
-        light,
-        medium,
-        wellDone,
-        overCooked,
-    }
+    
     private CookState m_cookState;
 
     private void Start()
@@ -72,10 +64,10 @@ public class Vial : MonoBehaviour
         }
     }
 
-    public void SetLiquid(int cookStateEnum)
+    public void SetLiquid(CookState cookState)
     {
         m_liquid.SetActive(true);
-        m_cookState = (CookState)cookStateEnum;
+        m_cookState = cookState;
         Renderer liquidRend = m_liquid.GetComponent<Renderer>();
         switch(Colour)
         {

@@ -13,15 +13,8 @@ public class Recipe : ScriptableObject
         Amber
     }
     public color Colour;
-    public enum cookState
-    {
-        underCooked,
-        light,
-        medium,
-        wellDone,
-        overCooked
-    }
-    public cookState CookState;
+    
+    public CookState cookState;
     public enum Ingredient
     {
         LiveLemming,
