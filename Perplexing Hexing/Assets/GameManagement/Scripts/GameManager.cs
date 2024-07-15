@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
+using Pixelplacement;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,7 +17,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     GameObject m_greenRecipeSpawnPos;
     public List<GameObject> GreenRecipePrefabs;
-    private GameObject m_activeGreenRecipe;    
+    private GameObject m_activeGreenRecipe;
+    public Spline inGreen, outGreen;
     
 
     [Header("Purple Recipes")]
@@ -24,8 +26,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     GameObject m_purpleRecipeSpawnPos;
     public List<GameObject> PurpleRecipePrefabs;
-    private GameObject m_activePurpleRecipe;    
-    
+    private GameObject m_activePurpleRecipe;
+    public Spline inPurple, outPurple;
+
 
     [Header("Amber Recipes")]
     public Cauldron AmberCauldron;
@@ -33,6 +36,7 @@ public class GameManager : MonoBehaviour
     GameObject m_amberRecipeSpawnPos;
     public List<GameObject> AmberRecipePrefabs;
     private GameObject m_activeAmberRecipe;
+    public Spline inAmber, outAmber;
 
     private AudioSource m_audio;
     public AudioClip Bell;
@@ -40,8 +44,9 @@ public class GameManager : MonoBehaviour
     public AudioClip Success;
     public AudioClip Fail;
 
-    private bool m_allColorsActive = false;
 
+
+    private bool m_allColorsActive = false;
     private List<string> m_activeColors = new List<string> { };
     private List<string> m_inactiveColors = new List<string> { "Green", "Purple", "Amber" };
 
@@ -77,17 +82,20 @@ public class GameManager : MonoBehaviour
                 m_activeGreenRecipe = Instantiate(GreenRecipePrefabs[randomSelectG], m_greenRecipeSpawnPos.transform.position, Quaternion.Euler(RecipeFaceDirection));
                 Recipe recipeG = m_activeGreenRecipe.GetComponentInChildren<RecipeDisplay>().RecipeData;
                 GreenCauldron.GetRecipe(recipeG);
+                m_activeGreenRecipe.GetComponent<Scroll>().SetSplines(inGreen, outGreen);
                 break;
             case "Purple":
                 int randomSelectP = Random.Range(0, PurpleRecipePrefabs.Count);
                 m_activePurpleRecipe = Instantiate(PurpleRecipePrefabs[randomSelectP], m_purpleRecipeSpawnPos.transform.position, Quaternion.Euler(RecipeFaceDirection));
                 Recipe recipeP = m_activePurpleRecipe.GetComponentInChildren<RecipeDisplay>().RecipeData;
+                m_activePurpleRecipe.GetComponent<Scroll>().SetSplines(inPurple, outPurple);
                 PurpleCauldron.GetRecipe(recipeP);
                 break;
             case "Amber":
                 int randomSelectA = Random.Range(0, AmberRecipePrefabs.Count);
                 m_activeAmberRecipe = Instantiate(AmberRecipePrefabs[randomSelectA], m_amberRecipeSpawnPos.transform.position, Quaternion.Euler(RecipeFaceDirection));
                 Recipe recipeA = m_activeAmberRecipe.GetComponentInChildren<RecipeDisplay>().RecipeData;
+                m_activeAmberRecipe.GetComponent<Scroll>().SetSplines(inAmber, outAmber);
                 AmberCauldron.GetRecipe(recipeA);  
                 break;
         }
