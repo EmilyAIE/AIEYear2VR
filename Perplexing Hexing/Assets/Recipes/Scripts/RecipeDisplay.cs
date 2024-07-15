@@ -10,11 +10,13 @@ public class RecipeDisplay : MonoBehaviour
     [SerializeField]
     public TextMeshProUGUI m_title, m_cookState, m_color;
     public GameObject IngredientsContainer;
-    public GameObject IngredientDisplayPrefab; 
+    public GameObject IngredientDisplayPrefab;
+    private Scroll m_scroll;
 
     private void Start()
     {
         RecipeData.Activate();
+        m_scroll = GetComponentInParent<Scroll>();
         m_title.text = RecipeData.Title;
         m_cookState.text = RecipeData.cookState.ToString();
         m_color.text = RecipeData.Color;        

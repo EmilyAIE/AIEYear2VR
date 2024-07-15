@@ -5542,6 +5542,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e7fa494bc775e0489a1bf6833925b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scrollText:
+  - {fileID: 8479554940784298407}
+  - {fileID: 1302523689653794872}
+  - {fileID: 4452394214247715993}
   flyInTween:
     serializedVersion: 2
     m_Curve:

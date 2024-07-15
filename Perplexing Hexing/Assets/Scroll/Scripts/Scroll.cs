@@ -9,7 +9,7 @@ public class Scroll : MonoBehaviour
     private Animator animator;
     private Spline inSpline, outSpline;
     private float inDuration = 2f, outDuration = 2f, textFadeDuration = 0.5f;
-    private TextMeshProUGUI scrollText;
+    public List<TextMeshProUGUI> scrollText;
     private CanvasGroup canvasGroup;
     public AnimationCurve flyInTween, flyOutTween, textFadeTween;
 
@@ -17,8 +17,7 @@ public class Scroll : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         inSpline = GameObject.FindGameObjectWithTag("InSpline").GetComponent<Spline>();
-        outSpline = GameObject.FindGameObjectWithTag("OutSpline").GetComponent<Spline>();
-        scrollText = GetComponentInChildren<TextMeshProUGUI>();
+        outSpline = GameObject.FindGameObjectWithTag("OutSpline").GetComponent<Spline>();        
         canvasGroup = GetComponentInChildren<CanvasGroup>();
         canvasGroup.alpha = 0;
         EnterHutt();
@@ -28,7 +27,7 @@ public class Scroll : MonoBehaviour
     {
         animator.SetTrigger("RollUp");        
         Tween.Spline(inSpline, transform, 0, 1, true, inDuration, 1, flyInTween, Tween.LoopType.None, null, ArrivedInHut);
-        Invoke("ArrivedInHut", inDuration);
+        
     }
 
     private void ArrivedInHut()
@@ -41,7 +40,7 @@ public class Scroll : MonoBehaviour
     {
         animator.SetTrigger("RollUp");
         Invoke("ExitHuttPartTwo", 1);
-        Tween.CanvasGroupAlpha(canvasGroup, 0, textFadeDuration, 0, textFadeTween);
+        Tween.CanvasGroupAlpha(canvasGroup, 0, textFadeDuration, 0, textFadeTween);        
     }
 
     private void ExitHuttPartTwo()
@@ -53,19 +52,24 @@ public class Scroll : MonoBehaviour
 
     private void ArrivedOutside()
     {
-        animator.SetTrigger("RollDown");
+        Destroy(this);
+    }
+
+    public void AddIngredient(TextMeshProUGUI ingredient)
+    {
+        scrollText.Add(ingredient);
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            EnterHutt();
-        }
-
-        if (Input.GetMouseButtonDown(1))
-        {
-            ExitHutt();
-        }
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    EnterHutt();
+        //}
+        //
+        //if (Input.GetMouseButtonDown(1))
+        //{
+        //    ExitHutt();
+        //}
     }
 }

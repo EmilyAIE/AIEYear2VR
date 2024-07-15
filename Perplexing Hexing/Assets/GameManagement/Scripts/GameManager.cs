@@ -92,17 +92,21 @@ public class GameManager : MonoBehaviour
             default:
                 return;
             case "Green":
-                Destroy(m_activeGreenRecipe);
+                Scroll gScroll = m_activeGreenRecipe.GetComponentInParent<Scroll>();
+                gScroll.ExitHutt();
                 m_activeColors.Remove(color);
                 m_inactiveColors.Add(color);
+                
                 break;
             case "Purple":
-                Destroy(m_activePurpleRecipe);
+                Scroll pScroll = m_activePurpleRecipe.GetComponentInParent<Scroll>();
+                pScroll.ExitHutt();
                 m_activeColors.Remove(color);
-                m_inactiveColors.Add(color);
+                m_inactiveColors.Add(color);                
                 break;
             case "Amber":
-                Destroy(m_activeAmberRecipe);
+                Scroll aScroll = m_activeAmberRecipe.GetComponentInParent<Scroll>();
+                aScroll.ExitHutt();                
                 m_activeColors.Remove(color);
                 m_inactiveColors.Add(color);
                 break;
