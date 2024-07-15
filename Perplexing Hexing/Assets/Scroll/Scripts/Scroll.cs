@@ -7,7 +7,7 @@ using TMPro;
 public class Scroll : MonoBehaviour
 {
     private Animator animator;
-    private Spline inSpline, outSpline;
+    private Spline m_inSpline, m_outSpline;
     private float inDuration = 2f, outDuration = 2f, textFadeDuration = 0.5f;
     public List<TextMeshProUGUI> scrollText;
     private CanvasGroup canvasGroup;
@@ -15,18 +15,15 @@ public class Scroll : MonoBehaviour
 
     private void OnEnable()
     {
-        animator = GetComponent<Animator>();
-        inSpline = GameObject.FindGameObjectWithTag("InSpline").GetComponent<Spline>();
-        outSpline = GameObject.FindGameObjectWithTag("OutSpline").GetComponent<Spline>();        
+        animator = GetComponent<Animator>();            
         canvasGroup = GetComponentInChildren<CanvasGroup>();
-        canvasGroup.alpha = 0;
-        EnterHutt();
+        canvasGroup.alpha = 0;        
     }
 
     public void EnterHutt()
     {
         animator.SetTrigger("RollUp");        
-        Tween.Spline(inSpline, transform, 0, 1, true, inDuration, 1, flyInTween, Tween.LoopType.None, null, ArrivedInHut);
+        Tween.Spline(m_inSpline, transform, 0, 1, true, inDuration, 1, flyInTween, Tween.LoopType.None, null, ArrivedInHut);
         
     }
 
@@ -45,9 +42,9 @@ public class Scroll : MonoBehaviour
 
     private void ExitHuttPartTwo()
     {
-        int len = outSpline.Anchors.Length - 1;
-        outSpline.Anchors[len].transform.position = transform.position;
-        Tween.Spline(outSpline, transform, 1, textFadeDuration, true, outDuration, 0, flyOutTween, Tween.LoopType.None, null, ArrivedOutside);
+        int len = m_outSpline.Anchors.Length - 1;
+        m_outSpline.Anchors[len].transform.position = transform.position;
+        Tween.Spline(m_outSpline, transform, 1, textFadeDuration, true, outDuration, 0, flyOutTween, Tween.LoopType.None, null, ArrivedOutside);
     }
 
     private void ArrivedOutside()
@@ -71,5 +68,12 @@ public class Scroll : MonoBehaviour
         //{
         //    ExitHutt();
         //}
+    }
+
+    public void SetSplines(Spline inSpline, Spline outSpline)
+    {
+        m_inSpline = inSpline;
+        m_outSpline = outSpline;
+        EnterHutt();
     }
 }
