@@ -37,11 +37,13 @@ public class MenuController : MonoBehaviour
 
     public void EnterTutorialScreen()
     {
-
+        m_mainScreen.SetActive(false);
+        m_tutorial.SetActive(true);
     }
 
     public void ExitTutorialScreen()
     {
-
+        m_mainScreen.SetActive(true);
+        m_tutorial.SetActive(false);
     }
 }
