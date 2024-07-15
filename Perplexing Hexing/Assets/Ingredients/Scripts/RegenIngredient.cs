@@ -64,6 +64,8 @@ public class RegenIngredient : MonoBehaviour
     public void SetInactive(GameObject activeObject)
     {
         activeObject.SetActive(false);
+        Rigidbody rb = activeObject.GetComponent<Rigidbody>();
+        rb.velocity = Vector3.zero;
         activeObject.transform.parent = InactiveObjects.transform;
         activeObject.transform.position = InactiveObjects.transform.position;
     }

@@ -62,7 +62,7 @@ Material:
     - _CastShadows: 0
     - _Cull: 2
     - _DstBlend: 10
-    - _Flame_Noise_Scale: 1.28
+    - _Flame_Noise_Scale: 1.67
     - _Flame_Speed: 0.69
     - _Heat_Distortion_Strength: 0
     - _Intersection_Flame_Multiplier: 3.6
