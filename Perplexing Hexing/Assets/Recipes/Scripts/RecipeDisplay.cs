@@ -24,7 +24,9 @@ public class RecipeDisplay : MonoBehaviour
         for(int i = 0; i < RecipeData.Ingredients.Count; i++)
         {
             GameObject ingredientText = Instantiate(IngredientDisplayPrefab, IngredientsContainer.transform);
-            ingredientText.GetComponent<TextMeshProUGUI>().text = RecipeData.Ingredients[i];
+            TextMeshProUGUI text = ingredientText.GetComponent<TextMeshProUGUI>();
+            text.text = RecipeData.Ingredients[i];
+            m_scroll.AddIngredient(text);
         }
     }
 }
