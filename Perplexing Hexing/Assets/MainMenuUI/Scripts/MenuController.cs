@@ -13,6 +13,8 @@ public class MenuController : MonoBehaviour
     [SerializeField]
     GameObject m_nextButton, m_prevButton;
 
+    int m_pageNum = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,5 +53,47 @@ public class MenuController : MonoBehaviour
     {
         m_mainScreen.SetActive(true);
         m_tutorial.SetActive(false);
+    }
+
+    public void NextPage()
+    {
+        m_pageNum++;
+        if (m_pageNum > m_tutPages.Length - 1)
+        {
+            m_pageNum = m_tutPages.Length - 1;
+        }
+
+        for (int i = 0; i < m_tutPages.Length; i++)
+        {
+            if (i == m_pageNum)
+            {
+                m_tutPages[i].SetActive(true);
+            }
+            else
+            {
+                m_tutPages[i].SetActive(false);
+            }
+        }
+    }
+
+    public void PrevPage()
+    {
+        m_pageNum--;
+        if (m_pageNum < 0)
+        {
+            m_pageNum = 0;
+        }
+
+        for (int i = 0; i < m_tutPages.Length; i++)
+        {
+            if (i == m_pageNum)
+            {
+                m_tutPages[i].SetActive(true);
+            }
+            else
+            {
+                m_tutPages[i].SetActive(false);
+            }
+        }
     }
 }
