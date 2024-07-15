@@ -16,13 +16,13 @@ public class RecipeDisplay : MonoBehaviour
     {
         RecipeData.Activate();
         m_title.text = RecipeData.Title;
-        m_cookState.text = "Duration: " + RecipeData.cookState.ToString();
-        m_color.text = "Colour: " + RecipeData.Color;        
+        m_cookState.text = RecipeData.cookState.ToString();
+        m_color.text = RecipeData.Color;        
 
         for(int i = 0; i < RecipeData.Ingredients.Count; i++)
         {
             GameObject ingredientText = Instantiate(IngredientDisplayPrefab, IngredientsContainer.transform);
-            ingredientText.GetComponent<TextMeshProUGUI>().text = "Ingredient " + (i + 1) + ": " + RecipeData.Ingredients[i];
+            ingredientText.GetComponent<TextMeshProUGUI>().text = RecipeData.Ingredients[i];
         }
     }
 }

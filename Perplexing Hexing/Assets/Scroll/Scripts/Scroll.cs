@@ -21,20 +21,20 @@ public class Scroll : MonoBehaviour
         scrollText = GetComponentInChildren<TextMeshProUGUI>();
         canvasGroup = GetComponentInChildren<CanvasGroup>();
         canvasGroup.alpha = 0;
+        EnterHutt();
     }
 
     public void EnterHutt()
     {
-        animator.SetTrigger("RollUp");
+        animator.SetTrigger("RollUp");        
         Tween.Spline(inSpline, transform, 0, 1, true, inDuration, 1, flyInTween, Tween.LoopType.None, null, ArrivedInHut);
+        Invoke("ArrivedInHut", inDuration);
     }
 
     private void ArrivedInHut()
     {
         animator.SetTrigger("RollDown");
-        Tween.CanvasGroupAlpha(canvasGroup, 1, textFadeDuration, 0.5f, textFadeTween);
-        
-
+        Tween.CanvasGroupAlpha(canvasGroup, 1, textFadeDuration, 0.5f, textFadeTween);        
     }
 
     public void ExitHutt()
