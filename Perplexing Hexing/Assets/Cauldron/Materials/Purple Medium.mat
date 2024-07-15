@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CauldronLiquidMat
+  m_Name: Purple Medium
   m_Shader: {fileID: -6465566751694194690, guid: 4a7cc071de9317d49bf2cff16d2027a2, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -80,7 +80,7 @@ Material:
     - _WaveSteepness: 0.08
     m_Colors:
     - _LiquidColor: {r: 0.57075465, g: 1, b: 0.7601411, a: 0}
-    - _LiquidColorCenter: {r: 0.70273125, g: 0.37254906, b: 1, a: 0}
-    - _LiquidColorEdge: {r: 0.97606087, g: 0.4481132, b: 1, a: 0}
+    - _LiquidColorCenter: {r: 0.42977527, g: 0.17755428, b: 0.6603774, a: 0}
+    - _LiquidColorEdge: {r: 0.5854326, g: 0.14524741, b: 0.6037736, a: 0}
     - _WaveDirections: {r: 0, g: 0.2, b: 0.35, a: 0.75}
   m_BuildTextureStacks: []
