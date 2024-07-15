@@ -32,14 +32,24 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     GameObject m_amberRecipeSpawnPos;
     public List<GameObject> AmberRecipePrefabs;
-    private GameObject m_activeAmberRecipe;    
-    
+    private GameObject m_activeAmberRecipe;
+
+    private AudioSource m_audio;
+    public AudioClip Bell;
+    public AudioClip OpenDoor;
+    public AudioClip Success;
+    public AudioClip Fail;
 
     private bool m_allColorsActive = false;
 
     private List<string> m_activeColors = new List<string> { };
     private List<string> m_inactiveColors = new List<string> { "Green", "Purple", "Amber" };
-        
+
+    public void Start()
+    {
+        m_audio = GetComponent<AudioSource>();
+    }
+
     public void Update()
     {         
         if(!m_allColorsActive)
@@ -57,6 +67,7 @@ public class GameManager : MonoBehaviour
 
     public void GenerateRecipe(string color)
     {
+        m_audio.PlayOneShot(Bell);        
         switch(color)
         {
             default:
@@ -95,8 +106,7 @@ public class GameManager : MonoBehaviour
                 Scroll gScroll = m_activeGreenRecipe.GetComponentInParent<Scroll>();
                 gScroll.ExitHutt();
                 m_activeColors.Remove(color);
-                m_inactiveColors.Add(color);
-                
+                m_inactiveColors.Add(color);                
                 break;
             case "Purple":
                 Scroll pScroll = m_activePurpleRecipe.GetComponentInParent<Scroll>();
@@ -119,8 +129,7 @@ public class GameManager : MonoBehaviour
         int randomInt = Random.Range(0, m_inactiveColors.Count);
         color = m_inactiveColors[randomInt];
         m_inactiveColors.RemoveAt(randomInt);
-        m_activeColors.Add(color);
-                
+        m_activeColors.Add(color);                
         return color;
     }
 }
