@@ -40,7 +40,7 @@ public class Recipe : ScriptableObject
     [HideInInspector]
     public string Color;
 
-    private void Awake()
+    public void Activate()
     {
         switch(Colour)
         {
@@ -57,7 +57,7 @@ public class Recipe : ScriptableObject
                 break;
 
         }
-
+        Ingredients.Clear();
         for(int i = 0; i < IngredientSelect.Count; i++)
         {
             switch(IngredientSelect[i])

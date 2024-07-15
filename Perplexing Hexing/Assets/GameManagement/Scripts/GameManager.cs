@@ -39,8 +39,7 @@ public class GameManager : MonoBehaviour
 
     private List<string> m_activeColors = new List<string> { };
     private List<string> m_inactiveColors = new List<string> { "Green", "Purple", "Amber" };
-
-    float Timer = 0;
+        
     public void Update()
     {         
         if(!m_allColorsActive)
@@ -50,7 +49,7 @@ public class GameManager : MonoBehaviour
             {
                 m_timer = 0;
                 GenerateRecipe(SelectRecipeColor());
-                if (m_activeColors.Count == 3)
+                if (m_inactiveColors.Count == 0)
                     m_allColorsActive = true;
             }
         }
