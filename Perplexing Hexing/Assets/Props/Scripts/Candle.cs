@@ -15,8 +15,14 @@ public class Candle : MonoBehaviour
     private void OnEnable()
     {
         candleLight = GetComponentInChildren<Light>();
-        Tween.LocalPosition(transform, targetPos, loopDuration, 0, positionTween, Tween.LoopType.Loop);
-        Tween.LightIntensity(candleLight, intensityTarget, lightLoopDuration, 0, lightTween, Tween.LoopType.Loop);
+        if (candleLight != null)
+        {
+            Tween.LightIntensity(candleLight, intensityTarget, lightLoopDuration, 0, lightTween, Tween.LoopType.Loop);
+        }
+        float rand = Random.Range(0, 3f);
+        float delay = Random.Range(0, 3f);
+        Tween.LocalPosition(transform, targetPos, loopDuration + rand, delay, positionTween, Tween.LoopType.Loop);
+        
     }
 
 }

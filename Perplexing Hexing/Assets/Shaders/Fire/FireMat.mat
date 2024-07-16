@@ -60,6 +60,7 @@ Material:
     - _Blackness_Offset: 0
     - _Blend: 0
     - _CastShadows: 0
+    - _CauldronFire: 1
     - _Cull: 2
     - _DstBlend: 10
     - _Flame_Noise_Scale: 1.67
@@ -69,6 +70,7 @@ Material:
     - _Intersection_Flame_Offset: 0.57
     - _Intersection_and_Spark_Intensity: 2.69
     - _Metallic: 0
+    - _NoiseStrength: 0.4
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 0
