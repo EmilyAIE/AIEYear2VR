@@ -20,8 +20,9 @@ public class CauldronCollider : MonoBehaviour
         if (collider.CompareTag("Vial"))
         {
             Vial vial = collider.GetComponentInParent<Vial>();
-            if(vial.CheckOrientation())
+            if(vial.CheckOrientation() && vial.CanFill)
             {
+                vial.CanFill = false;
                 vial.Colour = m_cauldron.Colour.ToString();
                 vial.CorrectPotion = m_cauldron.CompareRecipe(vial.VialType);
                 vial.SetLiquid(m_cauldron.GetCookState());
@@ -41,8 +42,9 @@ public class CauldronCollider : MonoBehaviour
         {            
             Ingredient ingredient = collider.GetComponentInParent<Ingredient>();
             m_cauldron.AddToMix(ingredient.Name);
-            InstantiateFloatingIngredient(ingredient.name, ingredient.transform);
-            ingredient.DestroyIngredient();            
+            InstantiateFloatingIngredient(ingredient.Name, ingredient.transform);
+            ingredient.DestroyIngredient();
+            
             return;
         }
         if(collider.CompareTag("Sponge"))

@@ -45,14 +45,18 @@ public class CheckPotion : MonoBehaviour
     public void Success(Vial vial)
     {
         //m_rend.material.color = Color.green;
+        Debug.Log("Potion was a Success");
         m_gM.RemoveCurrentRecipe(vial.Colour);
         m_currentVial.DestroyVial();
+        vial.CanFill = true;
         Invoke("ResetColour", 1.5f);
     }
 
     public void Fail(Vial vial)
     {
         //m_rend.material.color = Color.red;
+        Debug.Log("Potion was a Success");
+        vial.CanFill = true;
         m_currentVial.DestroyVial();
         Invoke("ResetColour", 1.5f);
     }
