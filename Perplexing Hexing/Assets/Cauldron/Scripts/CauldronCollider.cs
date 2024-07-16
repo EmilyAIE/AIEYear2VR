@@ -31,7 +31,8 @@ public class CauldronCollider : MonoBehaviour
                     Debug.Log("Potion Is Incorrect");
                 }
                 m_cauldron.StopCooking();
-            }            
+            }
+            return;
         }
         if(collider.CompareTag("Ingredient"))
         {            
@@ -43,6 +44,13 @@ public class CauldronCollider : MonoBehaviour
             {
                 lemmingSounds.PlayDrownNoise();
             }
+            return;
+        }
+        if(collider.CompareTag("Sponge"))
+        {
+            m_cauldron.EnterCookState(CookState.overCooked);
+            Ingredient ingredient = collider.GetComponentInParent<Ingredient>();            
+            ingredient.DestroyIngredient();
         }
     }
 }
