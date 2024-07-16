@@ -56,7 +56,7 @@ public class Cauldron : MonoBehaviour
         m_flame = GetComponentInChildren<CauldronFlame>();
 
         //DEBUGGING DELETE LATER
-        UpdateCookText();
+        //UpdateCookText();
     }
 
     private void Update()
@@ -108,7 +108,7 @@ public class Cauldron : MonoBehaviour
                 
                 break;
         }
-        UpdateCookText();
+        //UpdateCookText();
     }
 
     public void GetRecipe(Recipe recipe)
