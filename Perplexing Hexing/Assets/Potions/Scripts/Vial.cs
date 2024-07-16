@@ -17,6 +17,8 @@ public class Vial : MonoBehaviour
     [SerializeField]
     float m_deleteTime;
 
+    public bool CanFill = true;
+
     public Material AmberDefault;
     public Material AmberLight;
     public Material AmberMedium;
