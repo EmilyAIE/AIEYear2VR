@@ -20,6 +20,11 @@ public class Cauldron : MonoBehaviour
     [SerializeField]
     GameObject m_liquid;    
     Renderer m_liquidRenderer;
+    CauldronFlame m_flame;
+
+    public AudioClip PuffNoise;
+    public AudioClip Explode;
+    public AudioClip Splash;
 
     public enum Colours
     { 
@@ -48,9 +53,10 @@ public class Cauldron : MonoBehaviour
     {
         m_audioSource = GetComponent<AudioSource>();
         m_liquidRenderer = m_liquid.GetComponent<Renderer>();
+        m_flame = GetComponentInChildren<CauldronFlame>();
 
         //DEBUGGING DELETE LATER
-        UpdateCookText();
+        //UpdateCookText();
     }
 
     private void Update()
@@ -69,6 +75,7 @@ public class Cauldron : MonoBehaviour
     public void AddToMix(string ingredient)
     {
         m_currentIngredients.Add(ingredient);
+        m_audioSource.PlayOneShot(Splash);
         UpdateCookText();
     }
 
@@ -79,24 +86,29 @@ public class Cauldron : MonoBehaviour
         {
             default:
                 break;
-            case CookState.underCooked:
+            case CookState.underCooked:                
                 m_liquidRenderer.material = m_default;
                 break;
             case CookState.light:
+                m_audioSource.PlayOneShot(PuffNoise);
                 m_liquidRenderer.material = m_light;
                 break;
             case CookState.medium:
+                m_audioSource.PlayOneShot(PuffNoise);
                 m_liquidRenderer.material = m_medium;
                 break;
             case CookState.wellDone:
+                m_audioSource.PlayOneShot(PuffNoise);
                 m_liquidRenderer.material = m_wellDone;
                 break;
             case CookState.overCooked:
+                m_audioSource.PlayOneShot(Explode);               
                 m_liquidRenderer.material = m_default;
-                m_isCooking = false;
+                StopCooking();
+                
                 break;
         }
-        UpdateCookText();
+        //UpdateCookText();
     }
 
     public void GetRecipe(Recipe recipe)
@@ -154,6 +166,7 @@ public class Cauldron : MonoBehaviour
     public void StartCooking()
     {
         m_isCooking = true;
+        m_audioSource.Play();
     }
 
     public void StopCooking()
@@ -162,6 +175,7 @@ public class Cauldron : MonoBehaviour
         m_targetIngredients.Clear();
         m_currentIngredients.Clear();
         EnterCookState(CookState.underCooked);
+        m_flame.StopCooking();
         m_isCooking = false;
         UpdateCookText();
     }
@@ -173,12 +187,12 @@ public class Cauldron : MonoBehaviour
 
     private void UpdateCookText()
     {
-        m_ingredientListText.text = "";
-        m_ingredientListText.text = "Current Cook state: " + m_currentCookState.ToString() + "\n";
-        m_ingredientListText.text += "Ingredients in pot:\n";
-        for (int i = 0; i < m_currentIngredients.Count; i++)
-        {
-            m_ingredientListText.text += m_currentIngredients[i] + "\n";
-        }
+       //m_ingredientListText.text = "";
+       //m_ingredientListText.text = "Current Cook state: " + m_currentCookState.ToString() + "\n";
+       //m_ingredientListText.text += "Ingredients in pot:\n";
+       //for (int i = 0; i < m_currentIngredients.Count; i++)
+       //{
+       //    m_ingredientListText.text += m_currentIngredients[i] + "\n";
+       //}
     }
 }

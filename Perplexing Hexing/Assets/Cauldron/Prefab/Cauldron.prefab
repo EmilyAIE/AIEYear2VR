@@ -182,6 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a9a49f43c0b9e74fb411cc5b2697d29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FlameWoosh: {fileID: 8300000, guid: cb10e397b682cab4a9d349afbee15c36, type: 3}
 --- !u!82 &2177237388120744679
 AudioSource:
   m_ObjectHideFlags: 0
@@ -192,7 +193,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 271ec3c10c22e314789eb296dd73442b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -395,6 +396,9 @@ MonoBehaviour:
   m_ingredientListText: {fileID: 0}
   m_cookStateDuration: 0
   m_liquid: {fileID: 8666757871196111760}
+  PuffNoise: {fileID: 8300000, guid: 486c097434ca9564aa3857160ff23a06, type: 3}
+  Explode: {fileID: 8300000, guid: cf0446053f6324e45b10b819b440497f, type: 3}
+  Splash: {fileID: 8300000, guid: de2f580a24fd42b4581118abaa9bc0e3, type: 3}
   Colour: 0
   m_default: {fileID: 0}
   m_light: {fileID: 0}
@@ -410,7 +414,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e2c8f1cff5386d746afe5fc2b2fb678b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

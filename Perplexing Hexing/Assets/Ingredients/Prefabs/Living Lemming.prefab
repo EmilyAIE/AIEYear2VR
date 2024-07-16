@@ -20,6 +20,8 @@ GameObject:
   - component: {fileID: 6220097109951739700}
   - component: {fileID: 1719912651}
   - component: {fileID: 1719912652}
+  - component: {fileID: 1749605350454169427}
+  - component: {fileID: 1262208422958170263}
   m_Layer: 0
   m_Name: Living Lemming
   m_TagString: Ingredient
@@ -187,12 +189,48 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1749605350454169427}
+        m_TargetAssemblyTypeName: IngredientSounds, Assembly-CSharp
+        m_MethodName: PickUpNoise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1262208422958170263}
+        m_TargetAssemblyTypeName: LemmingNoises, Assembly-CSharp
+        m_MethodName: PlayGrabNoise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1743751207743269513}
         m_TargetAssemblyTypeName: IngredientSpawnDetatch, Assembly-CSharp
         m_MethodName: DetatchFromParent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1262208422958170263}
+        m_TargetAssemblyTypeName: LemmingNoises, Assembly-CSharp
+        m_MethodName: PlayThrowNoise
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -419,6 +457,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  hasDisolved: 0
 --- !u!198 &1719912651
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -5216,6 +5255,35 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &1749605350454169427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326596097259211867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0c5574549eb9f34ea48c29b1e0a0863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_pickUp: {fileID: 8300000, guid: 6a9ed70d209a5be4daf84c639441a2b8, type: 3}
+  m_thud: {fileID: 8300000, guid: 22020012a361e0c4cb96ae3275580c94, type: 3}
+--- !u!114 &1262208422958170263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326596097259211867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bc7f3d47a17dbb48b6202b16c795c00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_grabNoise: {fileID: 8300000, guid: e7d4701a8ca491745bbee846278ff370, type: 3}
+  m_throwNoise: {fileID: 8300000, guid: f0a3622c318cdaf45b57a66635bf3f38, type: 3}
+  m_drownNoise: {fileID: 8300000, guid: 6e0694c53f961024ea25f12173bdd003, type: 3}
 --- !u!1 &2209136351155833407
 GameObject:
   m_ObjectHideFlags: 0
