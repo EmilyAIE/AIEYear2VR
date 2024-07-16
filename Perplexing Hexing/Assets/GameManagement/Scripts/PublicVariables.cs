@@ -10,3 +10,10 @@ public enum CookState
     wellDone,
     overCooked
 }
+
+public enum VialType
+{
+    Standard,
+    Inverted,
+    Round
+}

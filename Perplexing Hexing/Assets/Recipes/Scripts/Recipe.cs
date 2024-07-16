@@ -15,6 +15,7 @@ public class Recipe : ScriptableObject
     public color Colour;
     
     public CookState cookState;
+    public VialType vialType;
     public enum Ingredient
     {
         LiveLemming,

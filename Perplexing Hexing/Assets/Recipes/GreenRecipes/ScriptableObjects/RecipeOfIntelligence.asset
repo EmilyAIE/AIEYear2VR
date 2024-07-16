@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: Potion of Intelligence
   Colour: 0
-  CookState: 2
+  cookState: 1
   Ingredients: []
   IngredientSelect: 060000000600000004000000
   Color: Green

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: Recipe of Transfiguration
   Colour: 0
-  CookState: 3
+  cookState: 3
   Ingredients: []
   IngredientSelect: 000000000100000002000000030000000400000005000000060000000700000008000000
   Color: Green

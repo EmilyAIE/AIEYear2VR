@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: Potion Of Speed
   Colour: 0
-  CookState: 3
+  cookState: 3
   Ingredients: []
   IngredientSelect: 05000000050000000600000000000000
   Color: Green

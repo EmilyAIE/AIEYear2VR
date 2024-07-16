@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d52bf218cfcc02b44a20979d6f36c8d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ingredient: {fileID: 5721155197920415708, guid: ea0c2762681c367479e078ad538b7ebe, type: 3}
+  m_ingredient: {fileID: 1592686232256809112, guid: c745bf1bf5336354bb9f2721b519b651, type: 3}
   WaitingObject: {fileID: 2079434499651110631}
   InactiveObjects: {fileID: 265475563581767397}
   ActiveObjects: {fileID: 2759002364113730341}
