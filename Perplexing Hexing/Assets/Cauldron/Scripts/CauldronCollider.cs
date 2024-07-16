@@ -42,12 +42,7 @@ public class CauldronCollider : MonoBehaviour
             Ingredient ingredient = collider.GetComponentInParent<Ingredient>();
             m_cauldron.AddToMix(ingredient.Name);
             InstantiateFloatingIngredient(ingredient.name, ingredient.transform);
-            ingredient.DestroyIngredient();
-            LemmingNoises lemmingSounds = collider.GetComponentInParent<LemmingNoises>();
-            if(lemmingSounds)
-            {
-                lemmingSounds.PlayDrownNoise();
-            }
+            ingredient.DestroyIngredient();            
             return;
         }
         if(collider.CompareTag("Sponge"))

@@ -23,9 +23,4 @@ public class LemmingNoises : MonoBehaviour
     {
         m_audio.PlayOneShot(m_throwNoise);
     }
-
-    public void PlayDrownNoise()
-    {
-        m_audio.PlayOneShot(m_drownNoise);
-    }
 }

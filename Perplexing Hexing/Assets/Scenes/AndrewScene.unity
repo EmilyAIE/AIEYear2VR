@@ -256,6 +256,7 @@ MonoBehaviour:
   m_ingredientListText: {fileID: 0}
   m_cookStateDuration: 0
   m_liquid: {fileID: 0}
+  FloatingIngredientsParent: {fileID: 0}
   PuffNoise: {fileID: 0}
   Explode: {fileID: 0}
   Splash: {fileID: 0}
@@ -670,6 +671,7 @@ MonoBehaviour:
   m_ingredientListText: {fileID: 0}
   m_cookStateDuration: 0
   m_liquid: {fileID: 0}
+  FloatingIngredientsParent: {fileID: 0}
   PuffNoise: {fileID: 0}
   Explode: {fileID: 0}
   Splash: {fileID: 0}
@@ -1128,10 +1130,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3613854412888481088, guid: c745bf1bf5336354bb9f2721b519b651, type: 3}
       propertyPath: m_Name
-      value: Sponge
-      objectReference: {fileID: 0}
-    - target: {fileID: 3613854412888481088, guid: c745bf1bf5336354bb9f2721b519b651, type: 3}
-      propertyPath: m_TagString
       value: Sponge
       objectReference: {fileID: 0}
     - target: {fileID: 4138014062460159994, guid: c745bf1bf5336354bb9f2721b519b651, type: 3}
