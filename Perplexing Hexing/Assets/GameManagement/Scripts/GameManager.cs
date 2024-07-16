@@ -44,7 +44,8 @@ public class GameManager : MonoBehaviour
     public AudioClip Success;
     public AudioClip Fail;
 
-
+    public Animator inDoorAnim;
+    public Animator outDoorAnim;
 
     private bool m_allColorsActive = false;
     private List<string> m_activeColors = new List<string> { };
