@@ -79,16 +79,16 @@ public class Vial : MonoBehaviour
                 {
                     default:
                         break;
-                    case CookState.underCooked:
+                    case CookState.UnderCooked:
                         liquidRend.material = GreenDefault;
                         break;
-                    case CookState.light:
+                    case CookState.LightlyCooked:
                         liquidRend.material = GreenLight;
                         break;
-                    case CookState.medium:
+                    case CookState.MediumDone:
                         liquidRend.material = GreenMedium;
                         break;
-                    case CookState.wellDone:
+                    case CookState.WellDone:
                         liquidRend.material = GreenWellDone;
                         break;
                 }
@@ -98,16 +98,16 @@ public class Vial : MonoBehaviour
                 {
                     default:
                         break;
-                    case CookState.underCooked:
+                    case CookState.UnderCooked:
                         liquidRend.material = AmberDefault;
                         break;
-                    case CookState.light:
+                    case CookState.LightlyCooked:
                         liquidRend.material = AmberLight;
                         break;
-                    case CookState.medium:
+                    case CookState.MediumDone:
                         liquidRend.material = AmberMedium;
                         break;
-                    case CookState.wellDone:
+                    case CookState.WellDone:
                         liquidRend.material = AmberWellDone;
                         break;
                 }
@@ -117,16 +117,16 @@ public class Vial : MonoBehaviour
                 {
                     default:
                         break;
-                    case CookState.underCooked:
+                    case CookState.UnderCooked:
                         liquidRend.material = PurpleDefault;
                         break;
-                    case CookState.light:
+                    case CookState.LightlyCooked:
                         liquidRend.material = PurpleLight;
                         break;
-                    case CookState.medium:
+                    case CookState.MediumDone:
                         liquidRend.material = PurpleMedium;
                         break;
-                    case CookState.wellDone:
+                    case CookState.WellDone:
                         liquidRend.material = PurpleWellDone;
                         break;
                 }
