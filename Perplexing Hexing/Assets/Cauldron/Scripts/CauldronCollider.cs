@@ -49,8 +49,7 @@ public class CauldronCollider : MonoBehaviour
         if(collider.CompareTag("Sponge"))
         {
             m_cauldron.EnterCookState(CookState.overCooked);
-            Ingredient ingredient = collider.GetComponentInParent<Ingredient>();
-            m_cauldron.AddToMix(ingredient.Name);
+            Ingredient ingredient = collider.GetComponentInParent<Ingredient>();            
             ingredient.DestroyIngredient();
         }
     }
