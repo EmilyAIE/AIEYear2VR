@@ -31,7 +31,7 @@ public class Vial : MonoBehaviour
     public Material PurpleWellDone;
     
     private CookState m_cookState;
-    
+    public VialType VialType;
 
     private void Start()
     {
@@ -139,4 +139,6 @@ public class Vial : MonoBehaviour
         m_liquid.SetActive(false);
         m_regen.SetInactive(gameObject);
     }
+
+    
 }

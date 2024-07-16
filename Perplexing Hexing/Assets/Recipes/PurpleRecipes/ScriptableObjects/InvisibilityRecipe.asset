@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: Invisibility Potion
   Colour: 1
-  CookState: 2
+  cookState: 2
+  vialType: 0
   Ingredients: []
   IngredientSelect: 06000000010000000100000008000000
   Color: Green

@@ -23,7 +23,7 @@ public class CauldronCollider : MonoBehaviour
             if(vial.CheckOrientation())
             {
                 vial.Colour = m_cauldron.Colour.ToString();
-                vial.CorrectPotion = m_cauldron.CompareRecipe();
+                vial.CorrectPotion = m_cauldron.CompareRecipe(vial.VialType);
                 vial.SetLiquid(m_cauldron.GetCookState());
                 if(vial.CorrectPotion)
                 {

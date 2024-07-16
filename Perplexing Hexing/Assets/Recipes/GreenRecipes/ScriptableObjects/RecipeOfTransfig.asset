@@ -15,6 +15,7 @@ MonoBehaviour:
   Title: Recipe of Transfiguration
   Colour: 0
   cookState: 3
+  vialType: 1
   Ingredients: []
   IngredientSelect: 000000000100000002000000030000000400000005000000060000000700000008000000
   Color: Green
