@@ -79,7 +79,7 @@ public class Cauldron : MonoBehaviour
         UpdateCookText();
     }
 
-    private void EnterCookState(CookState cookstate)
+    public void EnterCookState(CookState cookstate)
     {
         m_currentCookState = cookstate;
         switch(m_currentCookState)
