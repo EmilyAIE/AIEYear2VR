@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CheckPotion : MonoBehaviour
@@ -13,6 +14,8 @@ public class CheckPotion : MonoBehaviour
     [SerializeField]
     Transform m_potionAttatchPoint;
 
+    bool m_canPutPotionIn = true;
+
     private void Start()
     {
         m_gM = GetComponentInParent<GameManager>();
@@ -21,11 +24,13 @@ public class CheckPotion : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Vial"))
+        if(other.CompareTag("Vial") && m_canPutPotionIn)
         {
             m_currentVial = other.GetComponentInParent<Vial>();
-            m_vialInBox = Instantiate(other.transform.parent.transform.parent.gameObject, m_potionAttatchPoint.transform.position, Quaternion.identity, m_potionAttatchPoint);
+            m_vialInBox = Instantiate(other.GetComponentInParent<Vial>().gameObject, m_potionAttatchPoint.transform.position, Quaternion.identity, m_potionAttatchPoint);
             m_vialInBox.GetComponentInChildren<SphereCollider>().enabled = false;
+            m_vialInBox.GetComponent<Vial>().enabled = false;
+            m_canPutPotionIn = false;
             if(m_currentVial.CorrectPotion)
             {
                 Success(m_currentVial);
@@ -55,5 +60,7 @@ public class CheckPotion : MonoBehaviour
     public void ResetColour()
     {
         //m_rend.material.color = m_defaultColor;
+        Destroy(m_vialInBox);
+        m_canPutPotionIn = true;
     }
 }
