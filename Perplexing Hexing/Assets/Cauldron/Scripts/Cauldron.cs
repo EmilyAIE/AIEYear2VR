@@ -187,12 +187,12 @@ public class Cauldron : MonoBehaviour
 
     private void UpdateCookText()
     {
-        m_ingredientListText.text = "";
-        m_ingredientListText.text = "Current Cook state: " + m_currentCookState.ToString() + "\n";
-        m_ingredientListText.text += "Ingredients in pot:\n";
-        for (int i = 0; i < m_currentIngredients.Count; i++)
-        {
-            m_ingredientListText.text += m_currentIngredients[i] + "\n";
-        }
+       //m_ingredientListText.text = "";
+       //m_ingredientListText.text = "Current Cook state: " + m_currentCookState.ToString() + "\n";
+       //m_ingredientListText.text += "Ingredients in pot:\n";
+       //for (int i = 0; i < m_currentIngredients.Count; i++)
+       //{
+       //    m_ingredientListText.text += m_currentIngredients[i] + "\n";
+       //}
     }
 }
