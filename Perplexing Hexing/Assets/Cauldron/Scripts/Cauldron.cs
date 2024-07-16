@@ -96,30 +96,30 @@ public class Cauldron : MonoBehaviour
             case CookState.light:
                 m_audioSource.PlayOneShot(PuffNoise);                
                 m_liquidRenderer.material = m_light;
-                ParticleSystem.MainModule lightMain = GetComponent<ParticleSystem>().main;
-                lightMain.startColor = m_liquidRenderer.material.GetColor("_LiquidColorCenter");
-                PuffEffect.Play();
+                //ParticleSystem.MainModule lightMain = GetComponent<ParticleSystem>().main;
+                //lightMain.startColor = m_liquidRenderer.material.GetColor("_LiquidColorCenter");
+                //PuffEffect.Play();
                 break;
             case CookState.medium:
                 m_audioSource.PlayOneShot(PuffNoise);
                 m_liquidRenderer.material = m_medium;
-                ParticleSystem.MainModule mediumMain = GetComponent<ParticleSystem>().main;
-                mediumMain.startColor = m_liquidRenderer.material.GetColor("_LiquidColorCenter");
-                PuffEffect.Play();
+                //ParticleSystem.MainModule mediumMain = GetComponent<ParticleSystem>().main;
+                //mediumMain.startColor = m_liquidRenderer.material.GetColor("_LiquidColorCenter");
+                //PuffEffect.Play();
                 break;
             case CookState.wellDone:
                 m_audioSource.PlayOneShot(PuffNoise);
                 m_liquidRenderer.material = m_wellDone;
-                ParticleSystem.MainModule wellDoneMain = GetComponent<ParticleSystem>().main;
-                wellDoneMain.startColor = m_liquidRenderer.material.GetColor("_LiquidColorCenter");
-                PuffEffect.Play();
+                //ParticleSystem.MainModule wellDoneMain = GetComponent<ParticleSystem>().main;
+                //wellDoneMain.startColor = m_liquidRenderer.material.GetColor("_LiquidColorCenter");
+                //PuffEffect.Play();
                 break;
             case CookState.overCooked:
                 m_audioSource.PlayOneShot(Explode);               
                 m_liquidRenderer.material = m_default;
-                ParticleSystem.MainModule main = GetComponent<ParticleSystem>().main;
-                main.startColor = new Color(0.8f, 0.8f, 0.8f, 1);
-                PuffEffect.Play();
+                //ParticleSystem.MainModule main = GetComponent<ParticleSystem>().main;
+                //main.startColor = new Color(0.8f, 0.8f, 0.8f, 1);
+                //PuffEffect.Play();
                 StopCooking();                
                 break;
         }
