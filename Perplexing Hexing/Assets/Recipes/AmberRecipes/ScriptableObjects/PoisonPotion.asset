@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: Poison Potion
   Colour: 2
-  CookState: 1
-  Ingredients: []
+  cookState: 1
+  Ingredients:
+  - Snake Tongue
+  - Snake Tongue
+  - Snake Tongue
+  - Eye Of Newt
   IngredientSelect: 03000000030000000300000001000000
-  Color: Green
+  Color: Amber

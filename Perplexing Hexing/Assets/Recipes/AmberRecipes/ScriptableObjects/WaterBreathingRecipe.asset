@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: Water Breathing Potion
   Colour: 2
-  CookState: 1
+  cookState: 1
   Ingredients: []
   IngredientSelect: 010000000600000000000000
   Color: Green

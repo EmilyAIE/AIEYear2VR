@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: Healing Potion
   Colour: 2
-  CookState: 3
+  cookState: 3
   Ingredients: []
   IngredientSelect: 000000000400000006000000
   Color: Green

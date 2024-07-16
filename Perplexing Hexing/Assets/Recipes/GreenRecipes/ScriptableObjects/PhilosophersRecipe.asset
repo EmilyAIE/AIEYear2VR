@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: Philosopher's Potion
   Colour: 0
-  CookState: 3
+  cookState: 3
   Ingredients: []
   IngredientSelect: 0300000003000000030000000600000001000000
   Color: Green
