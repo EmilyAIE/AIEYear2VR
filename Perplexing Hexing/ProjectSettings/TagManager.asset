@@ -9,6 +9,7 @@ TagManager:
   - Ingredient
   - InSpline
   - OutSpline
+  - Sponge
   layers:
   - Default
   - TransparentFX

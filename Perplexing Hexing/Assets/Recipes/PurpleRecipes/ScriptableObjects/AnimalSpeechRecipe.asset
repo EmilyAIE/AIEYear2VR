@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: Animal Speech Potion
   Colour: 1
-  CookState: 2
+  cookState: 2
+  vialType: 1
   Ingredients: []
   IngredientSelect: 0000000001000000060000000500000003000000
   Color: Green

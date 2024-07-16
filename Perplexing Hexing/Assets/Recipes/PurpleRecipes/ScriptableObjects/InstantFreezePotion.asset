@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: Instant Freeze Potion
   Colour: 1
-  CookState: 1
+  cookState: 3
+  vialType: 1
   Ingredients:
   - Frozen Tear
   - Frozen Tear

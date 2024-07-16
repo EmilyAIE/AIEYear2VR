@@ -15,6 +15,7 @@ public class Recipe : ScriptableObject
     public color Colour;
     
     public CookState cookState;
+    public VialType vialType;
     public enum Ingredient
     {
         LiveLemming,
@@ -27,7 +28,6 @@ public class Recipe : ScriptableObject
         FrozenTear,
         WrappedCandy
     }
-
     [HideInInspector]
     public List<string> Ingredients;
     public List<Ingredient> IngredientSelect;

@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: Insta-Fix Potion
   Colour: 2
-  CookState: 3
+  cookState: 3
+  vialType: 1
   Ingredients: []
   IngredientSelect: 040000000500000005000000020000000200000001000000
   Color: Green

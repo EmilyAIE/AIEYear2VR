@@ -568,6 +568,10 @@ MonoBehaviour:
   m_color: {fileID: 1302523691495433709}
   IngredientsContainer: {fileID: 8641259782536773610}
   IngredientDisplayPrefab: {fileID: 2056317849691174847, guid: 96b47cf0c717b8b44bbca2813b0fbca5, type: 3}
+  VialStamps:
+  - {fileID: 21300000, guid: dc7d4c33388d9044984390b0a73cc3e1, type: 3}
+  - {fileID: 21300000, guid: e6cf5154bfd9b8c4cafd1d9c276e0ab5, type: 3}
+  - {fileID: 21300000, guid: 6f1823d0a94f7d2459f3a7004ca8a303, type: 3}
 --- !u!1 &8641259782536773610
 GameObject:
   m_ObjectHideFlags: 0

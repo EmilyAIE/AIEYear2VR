@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: Love Potion
   Colour: 2
-  CookState: 2
+  cookState: 2
   Ingredients: []
   IngredientSelect: 08000000080000000700000007000000
   Color: Green

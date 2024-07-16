@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: Wolfsbane Potion
   Colour: 0
-  CookState: 2
-  Ingredients: []
+  cookState: 2
+  Ingredients:
+  - Unicorn Horn
+  - Frozen Tear
   IngredientSelect: 0600000007000000
   Color: Green
