@@ -21,6 +21,8 @@ public class Cauldron : MonoBehaviour
     GameObject m_liquid;    
     Renderer m_liquidRenderer;
     CauldronFlame m_flame;
+    
+    public GameObject FloatingIngredientsParent;
 
     public AudioClip PuffNoise;
     public AudioClip Explode;
@@ -79,7 +81,7 @@ public class Cauldron : MonoBehaviour
         UpdateCookText();
     }
 
-    private void EnterCookState(CookState cookstate)
+    public void EnterCookState(CookState cookstate)
     {
         m_currentCookState = cookstate;
         switch(m_currentCookState)
@@ -183,6 +185,14 @@ public class Cauldron : MonoBehaviour
     public CookState GetCookState()
     {
         return m_currentCookState;
+    }
+
+    public void RemoveFloatIngredients()
+    {
+        foreach(GameObject gO in FloatingIngredientsParent.transform)
+        {
+            Destroy(gO);
+        }
     }
 
     private void UpdateCookText()
