@@ -106,8 +106,7 @@ public class Cauldron : MonoBehaviour
             case CookState.overCooked:
                 m_audioSource.PlayOneShot(Explode);               
                 m_liquidRenderer.material = m_default;
-                StopCooking();
-                
+                StopCooking();                
                 break;
         }
         //UpdateCookText();
@@ -118,7 +117,7 @@ public class Cauldron : MonoBehaviour
         m_activeRecipe = recipe;
     }
 
-    public bool CompareRecipe()
+    public bool CompareRecipe(VialType vialType)
     {
         for(int i = 0; i < m_activeRecipe.Ingredients.Count; i++)
         {
@@ -133,6 +132,12 @@ public class Cauldron : MonoBehaviour
         if (m_currentIngredients.Count != m_targetIngredients.Count)
         {
             Debug.Log("Incorrect Number of Ingredients");
+            return false;
+        }
+        //Compare vial used to vial type on recipe
+        if(vialType != m_activeRecipe.vialType)
+        {
+            Debug.Log("Incorrect Vial Type");
             return false;
         }
         //Compare ingredients in cauldron to ingredients on recipe 

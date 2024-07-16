@@ -15,6 +15,7 @@ MonoBehaviour:
   Title: Philosopher's Potion
   Colour: 0
   cookState: 3
+  vialType: 1
   Ingredients: []
   IngredientSelect: 0300000003000000030000000600000001000000
   Color: Green

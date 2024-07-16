@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: Shrinking Potion
   Colour: 1
-  CookState: 2
+  cookState: 2
+  vialType: 2
   Ingredients: []
   IngredientSelect: 080000000100000005000000
   Color: Green

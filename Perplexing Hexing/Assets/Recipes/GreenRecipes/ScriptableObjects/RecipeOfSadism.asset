@@ -15,6 +15,7 @@ MonoBehaviour:
   Title: Potion Of Sadism
   Colour: 0
   cookState: 3
+  vialType: 2
   Ingredients: []
   IngredientSelect: 00000000000000000000000000000000
   Color: Green
