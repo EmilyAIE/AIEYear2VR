@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 388221922664660653}
   m_Layer: 0
   m_Name: PotionA
-  m_TagString: Vial
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -490,6 +490,7 @@ MonoBehaviour:
   PurpleLight: {fileID: 2100000, guid: 9d725dadf704ed74e869b505c9f9fbeb, type: 2}
   PurpleMedium: {fileID: 2100000, guid: 55227c1f5fa4eb447b5dcb72d925b73d, type: 2}
   PurpleWellDone: {fileID: 2100000, guid: eed632452a9a789409738c28241b6600, type: 2}
+  VialType: 0
 --- !u!114 &388221922664660653
 MonoBehaviour:
   m_ObjectHideFlags: 0

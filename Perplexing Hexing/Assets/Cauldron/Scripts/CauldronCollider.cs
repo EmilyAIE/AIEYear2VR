@@ -20,8 +20,9 @@ public class CauldronCollider : MonoBehaviour
         if (collider.CompareTag("Vial"))
         {
             Vial vial = collider.GetComponentInParent<Vial>();
-            if(vial.CheckOrientation())
+            if(vial.CheckOrientation() && vial.CanFill)
             {
+                vial.CanFill = false;
                 vial.Colour = m_cauldron.Colour.ToString();
                 vial.CorrectPotion = m_cauldron.CompareRecipe(vial.VialType);
                 vial.SetLiquid(m_cauldron.GetCookState());

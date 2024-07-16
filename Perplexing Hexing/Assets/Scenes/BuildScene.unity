@@ -6842,6 +6842,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CauldronPuffEffect
       objectReference: {fileID: 0}
+    - target: {fileID: 5771441982894448410, guid: 4950de40b9e2c5545b05dfce79fb859c, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5771441982894448411, guid: 4950de40b9e2c5545b05dfce79fb859c, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -9351,7 +9355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4913850873732414581, guid: 7b725126aa0fece4eb69425593d01d54, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b725126aa0fece4eb69425593d01d54, type: 3}
@@ -14259,6 +14263,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CauldronPuffEffect
       objectReference: {fileID: 0}
+    - target: {fileID: 5771441982894448410, guid: 4950de40b9e2c5545b05dfce79fb859c, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5771441982894448411, guid: 4950de40b9e2c5545b05dfce79fb859c, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -17087,6 +17095,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CauldronPuffEffect
       objectReference: {fileID: 0}
+    - target: {fileID: 5771441982894448410, guid: 4950de40b9e2c5545b05dfce79fb859c, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5771441982894448411, guid: 4950de40b9e2c5545b05dfce79fb859c, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -18197,6 +18209,14 @@ PrefabInstance:
       value: 44.7
       objectReference: {fileID: 0}
     - target: {fileID: 4686230364420934802, guid: 2e4b8e4b3d9541f4197af00defafb1a0, type: 3}
+      propertyPath: m_Size.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686230364420934802, guid: 2e4b8e4b3d9541f4197af00defafb1a0, type: 3}
+      propertyPath: m_Center.y
+      value: -12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686230364420934802, guid: 2e4b8e4b3d9541f4197af00defafb1a0, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -18879,6 +18899,14 @@ PrefabInstance:
     - target: {fileID: 8115821853682971412, guid: f1c9c5b8d6b49554a8b3a4608eab5637, type: 3}
       propertyPath: m_Name
       value: Cauldron Amber
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525814655541540275, guid: f1c9c5b8d6b49554a8b3a4608eab5637, type: 3}
+      propertyPath: m_Size.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525814655541540275, guid: f1c9c5b8d6b49554a8b3a4608eab5637, type: 3}
+      propertyPath: m_Center.y
+      value: -12
       objectReference: {fileID: 0}
     - target: {fileID: 8525814655541540275, guid: f1c9c5b8d6b49554a8b3a4608eab5637, type: 3}
       propertyPath: m_IsTrigger
@@ -31945,6 +31973,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5138506556939452205, guid: 0812df561159d5149aba8d3d28bd14a4, type: 3}
+      propertyPath: m_Size.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5138506556939452205, guid: 0812df561159d5149aba8d3d28bd14a4, type: 3}
+      propertyPath: m_Center.y
+      value: -12
+      objectReference: {fileID: 0}
     - target: {fileID: 5138506556939452205, guid: 0812df561159d5149aba8d3d28bd14a4, type: 3}
       propertyPath: m_IsTrigger
       value: 1
