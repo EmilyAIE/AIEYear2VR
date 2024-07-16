@@ -41,8 +41,9 @@ public class CauldronCollider : MonoBehaviour
         {            
             Ingredient ingredient = collider.GetComponentInParent<Ingredient>();
             m_cauldron.AddToMix(ingredient.Name);
-            InstantiateFloatingIngredient(ingredient.name, ingredient.transform);
-            ingredient.DestroyIngredient();            
+            InstantiateFloatingIngredient(ingredient.Name, ingredient.transform);
+            ingredient.DestroyIngredient();
+            
             return;
         }
         if(collider.CompareTag("Sponge"))
