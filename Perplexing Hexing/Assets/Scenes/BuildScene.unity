@@ -2540,6 +2540,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1615322988}
     - target: {fileID: 2457650656896735195, guid: 986cb0c279290664bb1d4cc36e77e1c3, type: 3}
+      propertyPath: inDoorAnim
+      value: 
+      objectReference: {fileID: 523164021}
+    - target: {fileID: 2457650656896735195, guid: 986cb0c279290664bb1d4cc36e77e1c3, type: 3}
+      propertyPath: outDoorAnim
+      value: 
+      objectReference: {fileID: 962566748900357584}
+    - target: {fileID: 2457650656896735195, guid: 986cb0c279290664bb1d4cc36e77e1c3, type: 3}
       propertyPath: AmberCauldron
       value: 
       objectReference: {fileID: 2979481648268627139}
@@ -8419,8 +8427,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tangentMode: 0
-  _masterTangent: {fileID: 1976597686}
-  _slaveTangent: {fileID: 2007448549}
+  _masterTangent: {fileID: 2007448549}
+  _slaveTangent: {fileID: 1976597686}
 --- !u!137 &510289842
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 2
@@ -17289,8 +17297,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tangentMode: 0
-  _masterTangent: {fileID: 41474653}
-  _slaveTangent: {fileID: 1101133537}
+  _masterTangent: {fileID: 1101133537}
+  _slaveTangent: {fileID: 41474653}
 --- !u!137 &1302985492
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 2
@@ -18584,8 +18592,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tangentMode: 0
-  _masterTangent: {fileID: 1227475563}
-  _slaveTangent: {fileID: 450041032}
+  _masterTangent: {fileID: 450041032}
+  _slaveTangent: {fileID: 1227475563}
 --- !u!137 &1490431580
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 2
@@ -20974,8 +20982,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tangentMode: 0
-  _masterTangent: {fileID: 1188563283}
-  _slaveTangent: {fileID: 58716953}
+  _masterTangent: {fileID: 58716953}
+  _slaveTangent: {fileID: 1188563283}
 --- !u!137 &1788104409
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 2
