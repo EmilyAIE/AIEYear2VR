@@ -296,37 +296,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!1 &7976852546259541452
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3087983380330520659}
-  m_Layer: 0
-  m_Name: FloatingParent
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3087983380330520659
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7976852546259541452}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8929195868562680238}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8115821853682971412
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,7 +334,6 @@ Transform:
   - {fileID: 8962261288106410507}
   - {fileID: 638384426912763834}
   - {fileID: 4325471365465236448}
-  - {fileID: 3087983380330520659}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -434,10 +402,11 @@ MonoBehaviour:
   m_ingredientListText: {fileID: 0}
   m_cookStateDuration: 6
   m_liquid: {fileID: 2917609190098974822}
-  FloatingIngredientsParent: {fileID: 7976852546259541452}
+  FloatingIngredientsParent: {fileID: 0}
   PuffNoise: {fileID: 8300000, guid: 486c097434ca9564aa3857160ff23a06, type: 3}
   Explode: {fileID: 8300000, guid: cf0446053f6324e45b10b819b440497f, type: 3}
   Splash: {fileID: 8300000, guid: de2f580a24fd42b4581118abaa9bc0e3, type: 3}
+  PuffEffect: {fileID: 0}
   Colour: 0
   m_default: {fileID: 2100000, guid: f25846fcd9ce657449ac00c0ac3ef353, type: 2}
   m_light: {fileID: 2100000, guid: c9f0b8adc203840429b4d9a277dce11f, type: 2}
@@ -550,7 +519,6 @@ GameObject:
   - component: {fileID: 8962261287201517806}
   - component: {fileID: 8962261287201517805}
   - component: {fileID: 8962261287201517804}
-  - component: {fileID: 8962261287201517807}
   m_Layer: 0
   m_Name: Cauldron Fire
   m_TagString: Untagged
@@ -623,19 +591,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &8962261287201517807
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8962261287201517777}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8962261287709557122
 GameObject:
   m_ObjectHideFlags: 0
