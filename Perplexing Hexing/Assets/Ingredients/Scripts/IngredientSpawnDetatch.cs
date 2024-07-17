@@ -4,11 +4,28 @@ using UnityEngine;
 
 public class IngredientSpawnDetatch : MonoBehaviour
 {
-    RegenIngredient m_spawner;
+    RegenIngredient m_spawner;    
+    Vector3 m_startPosition;
+    bool attached;
 
-    private void Start()
+    private void OnEnable()
     {
-        m_spawner = transform.parent.GetComponentInParent<RegenIngredient>();
+        attached = true;
+        m_spawner = transform.parent.GetComponentInParent<RegenIngredient>();        
+        m_startPosition = transform.position;
+    }
+
+    private void Update()
+    {
+        if(attached)
+        {
+            Vector3 difVector = transform.position - m_startPosition;
+            float difFloat = difVector.magnitude;
+            if (difFloat > 0.3f)
+            {
+                DetatchFromParent();
+            }
+        }
     }
 
     /// <summary>
@@ -16,6 +33,7 @@ public class IngredientSpawnDetatch : MonoBehaviour
     /// </summary>
     public void DetatchFromParent()
     {
+        attached = false;
         m_spawner.MoveToActive(this.transform);
     }
 

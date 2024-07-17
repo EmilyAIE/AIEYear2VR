@@ -1,3 +1,4 @@
+using Pixelplacement;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -10,20 +11,35 @@ public class CheckPotion : MonoBehaviour
     //Renderer m_rend;
     Color m_defaultColor;
 
+    public Spline ExitSpline;
+
     GameObject m_vialInBox;
     [SerializeField]
     Transform m_potionAttatchPoint;
 
     bool m_canPutPotionIn = true;
 
-    Disolve[] disolvers;
+    Animator m_animator;
+
+    public Disolve DisolveOne;
+    public Disolve DisolveTwo;
+    public Disolve DisolveThree;
+
+    Vector3 startPos;
+    Quaternion startRotation;
 
     private void Start()
     {
         m_gM = GetComponentInParent<GameManager>();
+        startPos = transform.position;
+        startRotation = transform.rotation;
+        m_animator = GetComponent<Animator>();
         //m_rend = GetComponent<Renderer>();
         //m_defaultColor = m_rend.material.color;
-    }
+        FadeIn();
+        m_animator.SetTrigger("OpenBox");
+    }    
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Vial") && m_canPutPotionIn)
@@ -51,6 +67,9 @@ public class CheckPotion : MonoBehaviour
         m_gM.RemoveCurrentRecipe(vial.Colour);
         m_currentVial.DestroyVial();
         vial.CanFill = true;
+        m_animator.SetTrigger("CloseBox");
+        Tween.Spline(ExitSpline, transform, 0, 1, true, 3, 0);
+        Invoke("FadeOut", 3);
         Invoke("ResetColour", 1.5f);
     }
 
@@ -70,22 +89,26 @@ public class CheckPotion : MonoBehaviour
         m_canPutPotionIn = true;
     }
 
-    // DAN'S DODGY CODE
-    private void InDisolve()
+    public void FadeOut()
     {
-        disolvers = GetComponentsInChildren<Disolve>();
-        foreach(Disolve disolver in disolvers)
-        {
-            disolver.DisolveIn();
-        }
+        DisolveOne.DisolveOut();
+        DisolveTwo.DisolveOut();
+        DisolveThree.DisolveOut();
+        Invoke("ResetPosition", 3);
     }
 
-    private void OutDisolve()
+    public void ResetPosition()
     {
-        disolvers = GetComponentsInChildren<Disolve>();
-        foreach (Disolve disolver in disolvers)
-        {
-            disolver.DisolveOut();
-        }
+        transform.rotation = startRotation;
+        transform.position = startPos;
+        FadeIn();
+    }
+
+    public void FadeIn()
+    {
+        m_animator.SetTrigger("OpenBox");
+        DisolveOne.DisolveIn();
+        DisolveTwo.DisolveIn();
+        DisolveThree.DisolveIn();
     }
 }
