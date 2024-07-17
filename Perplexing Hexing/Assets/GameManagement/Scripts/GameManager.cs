@@ -1,8 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Rendering;
 using Pixelplacement;
 
 public class GameManager : MonoBehaviour
@@ -116,7 +113,7 @@ public class GameManager : MonoBehaviour
         if (m_allColorsActive)
             m_allColorsActive = false;
         OpenOutDoor();
-        Invoke("CloseOutDoor", 1);
+        Invoke("CloseOutDoor", 5);
         switch (color)
         {
             default:

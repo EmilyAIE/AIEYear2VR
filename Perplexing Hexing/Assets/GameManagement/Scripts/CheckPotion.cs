@@ -1,14 +1,10 @@
 using Pixelplacement;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class CheckPotion : MonoBehaviour
 {
     GameManager m_gM;
-    Vial m_currentVial;
-    //Renderer m_rend;
+    Vial m_currentVial;    
     Color m_defaultColor;
 
     public Spline ExitSpline;
@@ -33,9 +29,7 @@ public class CheckPotion : MonoBehaviour
         m_gM = GetComponentInParent<GameManager>();
         startPos = transform.position;
         startRotation = transform.rotation;
-        m_animator = GetComponent<Animator>();
-        //m_rend = GetComponent<Renderer>();
-        //m_defaultColor = m_rend.material.color;
+        m_animator = GetComponent<Animator>();        
         FadeIn();
         m_animator.SetTrigger("OpenBox");
     }    
@@ -68,7 +62,7 @@ public class CheckPotion : MonoBehaviour
         m_currentVial.DestroyVial();
         vial.CanFill = true;
         m_animator.SetTrigger("CloseBox");
-        Tween.Spline(ExitSpline, transform, 0, 1, true, 3, 0);
+        Invoke("FlyOut", 1);
         Invoke("FadeOut", 3);
         Invoke("ResetColour", 1.5f);
     }
@@ -110,5 +104,10 @@ public class CheckPotion : MonoBehaviour
         DisolveOne.DisolveIn();
         DisolveTwo.DisolveIn();
         DisolveThree.DisolveIn();
+    }
+
+    public void FlyOut()
+    {
+        Tween.Spline(ExitSpline, transform, 0, 1, true, 3, 0);
     }
 }
