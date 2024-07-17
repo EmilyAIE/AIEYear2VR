@@ -47,6 +47,8 @@ public class GameManager : MonoBehaviour
     public Animator inDoorAnim;
     public Animator outDoorAnim;
 
+    public Spline BoxSpline;
+
     private bool m_allColorsActive = false;
     private List<string> m_activeColors = new List<string> { };
     private List<string> m_inactiveColors = new List<string> { "Green", "Purple", "Amber" };

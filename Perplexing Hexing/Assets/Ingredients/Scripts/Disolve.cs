@@ -25,13 +25,20 @@ public class Disolve : MonoBehaviour
     public void DisolveIn()
     {
         Tween.ShaderFloat(mat, "_Cutoff_Height", DisolveRange.y, disolveDuration, 0, disolveInTween);
-        particles.Play();
+        if(particles)
+        {
+            particles.Play();
+        }
+        
     }
 
     public void DisolveOut()
     {
         Tween.ShaderFloat(mat, "_Cutoff_Height", DisolveRange.x, disolveDuration, 0, disolveOutTween);
-        particles.Play();
+        if(particles)
+        {
+            particles.Play();
+        }        
         Invoke("SetDisolved", disolveDuration);
     }
 
