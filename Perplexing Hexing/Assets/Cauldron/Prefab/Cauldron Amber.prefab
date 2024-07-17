@@ -519,7 +519,6 @@ GameObject:
   - component: {fileID: 8962261287201517806}
   - component: {fileID: 8962261287201517805}
   - component: {fileID: 8962261287201517804}
-  - component: {fileID: 8962261287201517807}
   m_Layer: 0
   m_Name: Cauldron Fire
   m_TagString: Untagged
@@ -592,19 +591,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &8962261287201517807
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8962261287201517777}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8962261287709557122
 GameObject:
   m_ObjectHideFlags: 0
