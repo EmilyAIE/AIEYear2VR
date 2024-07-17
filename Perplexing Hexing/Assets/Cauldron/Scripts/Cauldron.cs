@@ -57,10 +57,7 @@ public class Cauldron : MonoBehaviour
     {
         m_audioSource = GetComponent<AudioSource>();
         m_liquidRenderer = m_liquid.GetComponent<Renderer>();
-        m_flame = GetComponentInChildren<CauldronFlame>();
-
-        //DEBUGGING DELETE LATER
-        //UpdateCookText();
+        m_flame = GetComponentInChildren<CauldronFlame>();       
     }
 
     private void Update()
@@ -80,7 +77,7 @@ public class Cauldron : MonoBehaviour
     {
         m_currentIngredients.Add(ingredient);
         m_audioSource.PlayOneShot(Splash);
-        UpdateCookText();
+        
     }
 
     public void EnterCookState(CookState cookstate)
@@ -117,17 +114,14 @@ public class Cauldron : MonoBehaviour
             case CookState.overCooked:
                 m_audioSource.PlayOneShot(Explode);               
                 m_liquidRenderer.material = m_default;
-                foreach(Transform child in FloatingIngredientsParent.transform)
-                {
-                    Destroy(child.gameObject);
-                }
+                
                 //ParticleSystem.MainModule main = GetComponent<ParticleSystem>().main;
                 //main.startColor = new Color(0.8f, 0.8f, 0.8f, 1);
                 //PuffEffect.Play();
                 StopCooking();                
                 break;
         }
-        //UpdateCookText();
+        
     }
 
     public void GetRecipe(Recipe recipe)
@@ -196,13 +190,17 @@ public class Cauldron : MonoBehaviour
 
     public void StopCooking()
     {
+        foreach (Transform child in FloatingIngredientsParent.transform)
+        {
+            Destroy(child.gameObject);
+        }
         m_timer = 0;
         m_targetIngredients.Clear();
         m_currentIngredients.Clear();
         EnterCookState(CookState.UnderCooked);
         m_flame.StopCooking();
         m_isCooking = false;
-        UpdateCookText();
+        
     }
 
     public CookState GetCookState()
@@ -216,16 +214,5 @@ public class Cauldron : MonoBehaviour
         {
             Destroy(gO);
         }
-    }
-
-    private void UpdateCookText()
-    {
-       //m_ingredientListText.text = "";
-       //m_ingredientListText.text = "Current Cook state: " + m_currentCookState.ToString() + "\n";
-       //m_ingredientListText.text += "Ingredients in pot:\n";
-       //for (int i = 0; i < m_currentIngredients.Count; i++)
-       //{
-       //    m_ingredientListText.text += m_currentIngredients[i] + "\n";
-       //}
-    }
+    }    
 }
