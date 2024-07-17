@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
 using TMPro;
 
 public class Cauldron : MonoBehaviour
@@ -103,12 +101,11 @@ public class Cauldron : MonoBehaviour
                 break;
             case CookState.WellDone:
                 m_audioSource.PlayOneShot(PuffNoise);
-                m_liquidRenderer.material = m_wellDone;                
+                m_liquidRenderer.material = m_wellDone;               
                 m_puffEffect.Play();
                 break;
             case CookState.overCooked:
-                m_audioSource.PlayOneShot(Explode);               
-                m_liquidRenderer.material = m_default;                
+                m_audioSource.PlayOneShot(Explode);                               
                 m_puffEffect.Play();
                 StopCooking();                
                 break;
@@ -180,17 +177,18 @@ public class Cauldron : MonoBehaviour
     }
 
     public void StopCooking()
-    {        
-        m_timer = 0;
-        m_targetIngredients.Clear();
-        m_currentIngredients.Clear();
-        EnterCookState(CookState.UnderCooked);
-        m_flame.StopCooking();
-        m_isCooking = false;
+    {
         foreach (Transform child in FloatingIngredientsParent.transform)
         {
             Destroy(child.gameObject);
         }
+        m_timer = 0;
+        m_targetIngredients.Clear();
+        m_currentIngredients.Clear();        
+        m_flame.StopCooking();
+        m_isCooking = false;
+        m_currentCookState = CookState.UnderCooked;
+        m_liquidRenderer.material = m_default;
     }
 
     public CookState GetCookState()
@@ -198,5 +196,11 @@ public class Cauldron : MonoBehaviour
         return m_currentCookState;
     }
 
-     
+    public void RemoveFloatIngredients()
+    {
+        foreach(GameObject gO in FloatingIngredientsParent.transform)
+        {
+            Destroy(gO);
+        }
+    }    
 }

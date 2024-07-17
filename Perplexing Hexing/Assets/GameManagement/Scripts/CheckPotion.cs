@@ -21,6 +21,10 @@ public class CheckPotion : MonoBehaviour
     public Disolve DisolveTwo;
     public Disolve DisolveThree;
 
+    public ParticleSystem explode;
+    private AudioSource m_audio;
+    public AudioClip ExplodeBang;
+
     Vector3 startPos;
     Quaternion startRotation;
 
@@ -73,6 +77,8 @@ public class CheckPotion : MonoBehaviour
         Debug.Log("Potion was a Success");
         vial.CanFill = true;
         m_currentVial.DestroyVial();
+        explode.Play();
+        m_audio.PlayOneShot(ExplodeBang);
         Invoke("ResetColour", 1.5f);
     }
     
