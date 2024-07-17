@@ -5,8 +5,7 @@ public class CauldronFlame : MonoBehaviour
     Cauldron m_cauldron;
     AudioSource m_audio;
     public GameObject FlameObject;
-    public GameObject FlameLight;
-    public GameObject BubblesOne;
+    public GameObject FlameLight;    
     public GameObject BubblesTwo;
     public AudioClip FlameWoosh;
 
@@ -22,8 +21,7 @@ public class CauldronFlame : MonoBehaviour
         m_audio.PlayOneShot(FlameWoosh);
         m_audio.Play();
         FlameObject.SetActive(true);
-        FlameLight.SetActive(true);
-        BubblesOne.SetActive(true);
+        FlameLight.SetActive(true);        
         BubblesTwo.SetActive(true);
     }
 
@@ -31,8 +29,8 @@ public class CauldronFlame : MonoBehaviour
     {
         m_audio.Stop();
         FlameObject.SetActive(false);
-        FlameLight.SetActive(false);
-        BubblesOne.SetActive(false);
+        FlameLight.SetActive(false);        
         BubblesTwo.SetActive(false);
+        m_cauldron.StopCooking();
     }
 }

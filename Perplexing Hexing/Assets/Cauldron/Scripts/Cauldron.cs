@@ -1,5 +1,7 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 using TMPro;
 
 public class Cauldron : MonoBehaviour
@@ -101,7 +103,7 @@ public class Cauldron : MonoBehaviour
                 break;
             case CookState.WellDone:
                 m_audioSource.PlayOneShot(PuffNoise);
-                m_liquidRenderer.material = m_wellDone;               
+                m_liquidRenderer.material = m_wellDone;                
                 m_puffEffect.Play();
                 break;
             case CookState.overCooked:
@@ -185,11 +187,11 @@ public class Cauldron : MonoBehaviour
         }
         m_timer = 0;
         m_targetIngredients.Clear();
-        m_currentIngredients.Clear();        
+        m_currentIngredients.Clear();
+        EnterCookState(CookState.UnderCooked);
         m_flame.StopCooking();
         m_isCooking = false;
-        EnterCookState(CookState.UnderCooked);
-
+        
     }
 
     public CookState GetCookState()
