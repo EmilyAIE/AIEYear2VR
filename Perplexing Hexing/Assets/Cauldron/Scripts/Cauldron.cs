@@ -105,8 +105,7 @@ public class Cauldron : MonoBehaviour
                 m_puffEffect.Play();
                 break;
             case CookState.overCooked:
-                m_audioSource.PlayOneShot(Explode);               
-                m_liquidRenderer.material = m_default;                
+                m_audioSource.PlayOneShot(Explode);                               
                 m_puffEffect.Play();
                 StopCooking();                
                 break;
@@ -188,8 +187,8 @@ public class Cauldron : MonoBehaviour
         m_currentIngredients.Clear();        
         m_flame.StopCooking();
         m_isCooking = false;
-        EnterCookState(CookState.UnderCooked);
-
+        m_currentCookState = CookState.UnderCooked;
+        m_liquidRenderer.material = m_default;
     }
 
     public CookState GetCookState()
