@@ -17,6 +17,10 @@ public class MenuController : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI m_titleText;
 
+    public GameManager GM;
+    public GameObject table1;
+    public GameObject table2;
+
     int m_pageNum = 0;
 
     // Start is called before the first frame update
@@ -38,6 +42,15 @@ public class MenuController : MonoBehaviour
         m_beginButton.SetActive(false);
         m_titleText.text = "Brewing has Begun";
         m_titleText.alignment = TextAlignmentOptions.Top;
+        GM.GameStarted = true;
+        foreach(Transform child in table1.transform)
+        {
+            child.gameObject.SetActive(true);
+        }
+        foreach (Transform child in table2.transform)
+        {
+            child.gameObject.SetActive(true);
+        }
     }
 
     public void EnterControlsScreen()
