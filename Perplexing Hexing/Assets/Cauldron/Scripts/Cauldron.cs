@@ -180,18 +180,18 @@ public class Cauldron : MonoBehaviour
     }
 
     public void StopCooking()
-    {
-        foreach (Transform child in FloatingIngredientsParent.transform)
-        {
-            Destroy(child.gameObject);
-        }
+    {        
         m_timer = 0;
         m_targetIngredients.Clear();
         m_currentIngredients.Clear();
         EnterCookState(CookState.UnderCooked);
         m_flame.StopCooking();
         m_isCooking = false;
-        
+        foreach (Transform child in FloatingIngredientsParent.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
     }
 
     public CookState GetCookState()
