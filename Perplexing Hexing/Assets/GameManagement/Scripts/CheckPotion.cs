@@ -16,6 +16,8 @@ public class CheckPotion : MonoBehaviour
 
     bool m_canPutPotionIn = true;
 
+    Disolve[] disolvers;
+
     private void Start()
     {
         m_gM = GetComponentInParent<GameManager>();
@@ -66,5 +68,24 @@ public class CheckPotion : MonoBehaviour
         //m_rend.material.color = m_defaultColor;
         Destroy(m_vialInBox);
         m_canPutPotionIn = true;
+    }
+
+    // DAN'S DODGY CODE
+    private void InDisolve()
+    {
+        disolvers = GetComponentsInChildren<Disolve>();
+        foreach(Disolve disolver in disolvers)
+        {
+            disolver.DisolveIn();
+        }
+    }
+
+    private void OutDisolve()
+    {
+        disolvers = GetComponentsInChildren<Disolve>();
+        foreach (Disolve disolver in disolvers)
+        {
+            disolver.DisolveOut();
+        }
     }
 }
