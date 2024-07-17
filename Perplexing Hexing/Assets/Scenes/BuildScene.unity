@@ -15554,11 +15554,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b12f4c776d4104f9c14eef1fbe5a67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExitSpline: {fileID: 0}
+  ExitSpline: {fileID: 656471711}
   m_potionAttatchPoint: {fileID: 36651490}
-  DisolveOne: {fileID: 0}
-  DisolveTwo: {fileID: 0}
-  DisolveThree: {fileID: 0}
+  DisolveOne: {fileID: 6453105705543369012}
+  DisolveTwo: {fileID: 8424525729479854707}
+  DisolveThree: {fileID: 8633261523408564692}
 --- !u!1001 &1021226481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45227,9 +45227,9 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -72900,9 +72900,9 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -78373,9 +78373,9 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
