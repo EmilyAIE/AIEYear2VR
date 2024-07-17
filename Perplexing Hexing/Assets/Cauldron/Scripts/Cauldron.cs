@@ -90,24 +90,24 @@ public class Cauldron : MonoBehaviour
         {
             default:
                 break;
-            case CookState.underCooked:                
+            case CookState.UnderCooked:                
                 m_liquidRenderer.material = m_default;
                 break;
-            case CookState.light:
+            case CookState.LightlyCooked:
                 m_audioSource.PlayOneShot(PuffNoise);                
                 m_liquidRenderer.material = m_light;
                 //ParticleSystem.MainModule lightMain = GetComponent<ParticleSystem>().main;
                 //lightMain.startColor = m_liquidRenderer.material.GetColor("_LiquidColorCenter");
                 //PuffEffect.Play();
                 break;
-            case CookState.medium:
+            case CookState.MediumDone:
                 m_audioSource.PlayOneShot(PuffNoise);
                 m_liquidRenderer.material = m_medium;
                 //ParticleSystem.MainModule mediumMain = GetComponent<ParticleSystem>().main;
                 //mediumMain.startColor = m_liquidRenderer.material.GetColor("_LiquidColorCenter");
                 //PuffEffect.Play();
                 break;
-            case CookState.wellDone:
+            case CookState.WellDone:
                 m_audioSource.PlayOneShot(PuffNoise);
                 m_liquidRenderer.material = m_wellDone;
                 //ParticleSystem.MainModule wellDoneMain = GetComponent<ParticleSystem>().main;
@@ -195,7 +195,7 @@ public class Cauldron : MonoBehaviour
         m_timer = 0;
         m_targetIngredients.Clear();
         m_currentIngredients.Clear();
-        EnterCookState(CookState.underCooked);
+        EnterCookState(CookState.UnderCooked);
         m_flame.StopCooking();
         m_isCooking = false;
         UpdateCookText();

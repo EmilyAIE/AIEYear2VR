@@ -24,7 +24,7 @@ public class RecipeDisplay : MonoBehaviour
         m_scroll = GetComponentInParent<Scroll>();
         m_title.text = RecipeData.Title;
         m_cookState.text = RecipeData.cookState.ToString();
-        m_color.text = RecipeData.Color;
+        m_color.text = RecipeData.Color + " Cauldron";
         m_vialStamp = GetComponentInChildren<Image>();
         SetImage();
         for(int i = 0; i < RecipeData.Ingredients.Count; i++)

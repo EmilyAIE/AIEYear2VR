@@ -4,10 +4,10 @@ using UnityEngine;
 
 public enum CookState
 {
-    underCooked,
-    light,
-    medium,
-    wellDone,
+    UnderCooked,
+    LightlyCooked,
+    MediumDone,
+    WellDone,
     overCooked
 }
 

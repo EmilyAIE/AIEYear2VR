@@ -44,7 +44,8 @@ public class GameManager : MonoBehaviour
     public AudioClip Success;
     public AudioClip Fail;
 
-
+    public Animator inDoorAnim;
+    public Animator outDoorAnim;
 
     private bool m_allColorsActive = false;
     private List<string> m_activeColors = new List<string> { };
@@ -72,7 +73,9 @@ public class GameManager : MonoBehaviour
 
     public void GenerateRecipe(string color)
     {
-        m_audio.PlayOneShot(Bell);        
+        m_audio.PlayOneShot(Bell);
+        OpenInDoor();
+        Invoke("CloseInDoor", 2);
         switch(color)
         {
             default:
@@ -105,7 +108,8 @@ public class GameManager : MonoBehaviour
     {
         if (m_allColorsActive)
             m_allColorsActive = false;
-
+        OpenOutDoor();
+        Invoke("CloseOutDoor", 1);
         switch (color)
         {
             default:
@@ -139,5 +143,25 @@ public class GameManager : MonoBehaviour
         m_inactiveColors.RemoveAt(randomInt);
         m_activeColors.Add(color);                
         return color;
+    }
+
+    public void OpenInDoor()
+    {
+        inDoorAnim.SetTrigger("OpenDoor");
+    }
+
+    public void CloseInDoor()
+    {
+        inDoorAnim.SetTrigger("CloseDoor");
+    }
+
+    public void OpenOutDoor()
+    {
+        outDoorAnim.SetTrigger("OpenDoor");
+    }
+
+    public void CloseOutDoor()
+    {
+        outDoorAnim.SetTrigger("CloseDoor");
     }
 }
