@@ -191,7 +191,6 @@ public class Cauldron : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
-
     }
 
     public CookState GetCookState()
@@ -199,11 +198,5 @@ public class Cauldron : MonoBehaviour
         return m_currentCookState;
     }
 
-    public void RemoveFloatIngredients()
-    {
-        foreach(GameObject gO in FloatingIngredientsParent.transform)
-        {
-            Destroy(gO);
-        }
-    }    
+     
 }
