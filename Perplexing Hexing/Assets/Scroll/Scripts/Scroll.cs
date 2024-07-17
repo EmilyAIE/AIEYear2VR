@@ -49,7 +49,7 @@ public class Scroll : MonoBehaviour
 
     private void ArrivedOutside()
     {
-        Destroy(this);
+        Destroy(this.gameObject);
     }
 
     public void AddIngredient(TextMeshProUGUI ingredient)

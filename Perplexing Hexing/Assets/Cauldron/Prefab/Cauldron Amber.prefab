@@ -296,37 +296,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 35, y: 1, z: 35}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &6799363408289019773
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3551240898428638143}
-  m_Layer: 0
-  m_Name: FloatingParent
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3551240898428638143
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6799363408289019773}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8929195868562680238}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8115821853682971412
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,7 +334,6 @@ Transform:
   - {fileID: 8962261288106410507}
   - {fileID: 731938369}
   - {fileID: 8102139450568779792}
-  - {fileID: 3551240898428638143}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -434,10 +402,11 @@ MonoBehaviour:
   m_ingredientListText: {fileID: 0}
   m_cookStateDuration: 6
   m_liquid: {fileID: 2917609190098974822}
-  FloatingIngredientsParent: {fileID: 6799363408289019773}
+  FloatingIngredientsParent: {fileID: 0}
   PuffNoise: {fileID: 8300000, guid: 486c097434ca9564aa3857160ff23a06, type: 3}
   Explode: {fileID: 8300000, guid: cf0446053f6324e45b10b819b440497f, type: 3}
   Splash: {fileID: 8300000, guid: de2f580a24fd42b4581118abaa9bc0e3, type: 3}
+  PuffEffect: {fileID: 0}
   Colour: 2
   m_default: {fileID: 2100000, guid: 98aae2632685dd7469f0d4101a64f004, type: 2}
   m_light: {fileID: 2100000, guid: 07f0a5c88a7ef3f4b943836ca675f06b, type: 2}
