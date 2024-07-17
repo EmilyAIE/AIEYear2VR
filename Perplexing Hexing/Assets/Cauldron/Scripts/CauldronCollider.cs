@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class CauldronCollider : MonoBehaviour
@@ -52,6 +53,7 @@ public class CauldronCollider : MonoBehaviour
             m_cauldron.EnterCookState(CookState.overCooked);
             Ingredient ingredient = collider.GetComponentInParent<Ingredient>();            
             ingredient.DestroyIngredient();
+            
         }
     }
 
