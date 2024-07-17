@@ -53,6 +53,8 @@ public class GameManager : MonoBehaviour
     private List<string> m_activeColors = new List<string> { };
     private List<string> m_inactiveColors = new List<string> { "Green", "Purple", "Amber" };
 
+    public bool GameStarted = false;
+
     public void Start()
     {
         m_audio = GetComponent<AudioSource>();
@@ -60,17 +62,20 @@ public class GameManager : MonoBehaviour
 
     public void Update()
     {         
-        if(!m_allColorsActive)
+        if(GameStarted)
         {
-            m_timer += Time.deltaTime;           
-            if(m_timer > m_recipeSpawnDelay)
+            if (!m_allColorsActive)
             {
-                m_timer = 0;
-                GenerateRecipe(SelectRecipeColor());
-                if (m_inactiveColors.Count == 0)
-                    m_allColorsActive = true;
+                m_timer += Time.deltaTime;
+                if (m_timer > m_recipeSpawnDelay)
+                {
+                    m_timer = 0;
+                    GenerateRecipe(SelectRecipeColor());
+                    if (m_inactiveColors.Count == 0)
+                        m_allColorsActive = true;
+                }
             }
-        }
+        }        
     }
 
     public void GenerateRecipe(string color)
