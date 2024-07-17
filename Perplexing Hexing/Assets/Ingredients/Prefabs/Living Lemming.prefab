@@ -330,7 +330,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_ThrowVelocityScale: 5
+  m_ThrowVelocityScale: 1.5
   m_ThrowAngularVelocityScale: 1
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
@@ -360,16 +360,16 @@ MonoBehaviour:
   - Larry
   - Frank
   - Bubbles
+  - Bath Bomb
+  - 'Sans '
+  - 'Freddy '
   - Steve
-  - Sans Undertale
-  - Freddy Fazbear
-  - Minecraft Steve
   - Balthasar
   - Balthazar
-  - Mistah White
-  - Peter Griffen
+  - Mr Squeek
+  - Peter
   - Horse
-  - Jerma
+  - Jermy
   m_nameText: {fileID: 2209136351814801424}
 --- !u!114 &4200376065868681032
 MonoBehaviour:

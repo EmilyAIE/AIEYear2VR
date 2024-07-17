@@ -78,8 +78,8 @@ public class CheckPotion : MonoBehaviour
         vial.CanFill = true;
         m_currentVial.DestroyVial();
         explode.Play();
+        ResetColour();        
         m_audio.PlayOneShot(ExplodeBang);
-        Invoke("ResetColour", 1.5f);
     }
     
     public void ResetColour()

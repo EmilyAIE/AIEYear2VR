@@ -189,6 +189,7 @@ public class Cauldron : MonoBehaviour
         m_isCooking = false;
         m_currentCookState = CookState.UnderCooked;
         m_liquidRenderer.material = m_default;
+        m_audioSource.Stop();
     }
 
     public CookState GetCookState()

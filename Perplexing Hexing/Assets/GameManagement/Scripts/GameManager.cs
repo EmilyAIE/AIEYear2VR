@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
 
     public Animator inDoorAnim;
     public Animator outDoorAnim;
+    
 
     public Spline BoxSpline;
 
@@ -152,20 +153,24 @@ public class GameManager : MonoBehaviour
     public void OpenInDoor()
     {
         inDoorAnim.SetTrigger("OpenDoor");
+        
     }
 
     public void CloseInDoor()
     {
         inDoorAnim.SetTrigger("CloseDoor");
+        
     }
 
     public void OpenOutDoor()
     {
         outDoorAnim.SetTrigger("OpenDoor");
+        
     }
 
     public void CloseOutDoor()
     {
         outDoorAnim.SetTrigger("CloseDoor");
+        
     }
 }
