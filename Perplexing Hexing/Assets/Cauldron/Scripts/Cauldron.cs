@@ -93,30 +93,22 @@ public class Cauldron : MonoBehaviour
                 break;
             case CookState.LightlyCooked:
                 m_audioSource.PlayOneShot(PuffNoise);                
-                m_liquidRenderer.material = m_light;
-                ParticleSystem.MainModule lightMain = GetComponent<ParticleSystem>().main;
-                lightMain.startColor = m_liquidRenderer.material.GetColor("_LiquidColorCenter");
+                m_liquidRenderer.material = m_light;                
                 m_puffEffect.Play();
                 break;
             case CookState.MediumDone:
                 m_audioSource.PlayOneShot(PuffNoise);
-                m_liquidRenderer.material = m_medium;
-                ParticleSystem.MainModule mediumMain = GetComponent<ParticleSystem>().main;
-                mediumMain.startColor = m_liquidRenderer.material.GetColor("_LiquidColorCenter");
+                m_liquidRenderer.material = m_medium;                
                 m_puffEffect.Play();
                 break;
             case CookState.WellDone:
                 m_audioSource.PlayOneShot(PuffNoise);
-                m_liquidRenderer.material = m_wellDone;
-                ParticleSystem.MainModule wellDoneMain = GetComponent<ParticleSystem>().main;
-                wellDoneMain.startColor = m_liquidRenderer.material.GetColor("_LiquidColorCenter");
+                m_liquidRenderer.material = m_wellDone;                
                 m_puffEffect.Play();
                 break;
             case CookState.overCooked:
                 m_audioSource.PlayOneShot(Explode);               
                 m_liquidRenderer.material = m_default;                
-                ParticleSystem.MainModule main = GetComponent<ParticleSystem>().main;
-                main.startColor = new Color(0.8f, 0.8f, 0.8f, 1);
                 m_puffEffect.Play();
                 StopCooking();                
                 break;

@@ -7,8 +7,7 @@ using UnityEngine;
 public class CheckPotion : MonoBehaviour
 {
     GameManager m_gM;
-    Vial m_currentVial;
-    //Renderer m_rend;
+    Vial m_currentVial;    
     Color m_defaultColor;
 
     public Spline ExitSpline;
@@ -33,9 +32,7 @@ public class CheckPotion : MonoBehaviour
         m_gM = GetComponentInParent<GameManager>();
         startPos = transform.position;
         startRotation = transform.rotation;
-        m_animator = GetComponent<Animator>();
-        //m_rend = GetComponent<Renderer>();
-        //m_defaultColor = m_rend.material.color;
+        m_animator = GetComponent<Animator>();        
         FadeIn();
         m_animator.SetTrigger("OpenBox");
     }    

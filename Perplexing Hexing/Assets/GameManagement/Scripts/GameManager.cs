@@ -116,7 +116,7 @@ public class GameManager : MonoBehaviour
         if (m_allColorsActive)
             m_allColorsActive = false;
         OpenOutDoor();
-        Invoke("CloseOutDoor", 1);
+        Invoke("CloseOutDoor", 5);
         switch (color)
         {
             default:
