@@ -20670,6 +20670,8 @@ MonoBehaviour:
   DisolveOne: {fileID: 6453105705543369012}
   DisolveTwo: {fileID: 8424525729479854707}
   DisolveThree: {fileID: 8633261523408564692}
+  explode: {fileID: 617927696}
+  ExplodeBang: {fileID: 8300000, guid: cf0446053f6324e45b10b819b440497f, type: 3}
 --- !u!1001 &1021226481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49016,6 +49018,8 @@ MonoBehaviour:
   DisolveOne: {fileID: 0}
   DisolveTwo: {fileID: 0}
   DisolveThree: {fileID: 0}
+  explode: {fileID: 0}
+  ExplodeBang: {fileID: 0}
 --- !u!1 &2391537377294788927
 GameObject:
   m_ObjectHideFlags: 0
