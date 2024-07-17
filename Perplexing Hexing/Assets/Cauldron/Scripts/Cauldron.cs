@@ -117,6 +117,10 @@ public class Cauldron : MonoBehaviour
             case CookState.overCooked:
                 m_audioSource.PlayOneShot(Explode);               
                 m_liquidRenderer.material = m_default;
+                foreach(Transform child in FloatingIngredientsParent.transform)
+                {
+                    Destroy(child.gameObject);
+                }
                 //ParticleSystem.MainModule main = GetComponent<ParticleSystem>().main;
                 //main.startColor = new Color(0.8f, 0.8f, 0.8f, 1);
                 //PuffEffect.Play();
