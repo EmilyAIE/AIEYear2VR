@@ -28,7 +28,7 @@ public class Cauldron : MonoBehaviour
     public AudioClip Explode;
     public AudioClip Splash;
 
-    public ParticleSystem PuffEffect;
+    private ParticleSystem m_puffEffect;
 
     public enum Colours
     { 
@@ -57,7 +57,8 @@ public class Cauldron : MonoBehaviour
     {
         m_audioSource = GetComponent<AudioSource>();
         m_liquidRenderer = m_liquid.GetComponent<Renderer>();
-        m_flame = GetComponentInChildren<CauldronFlame>();       
+        m_flame = GetComponentInChildren<CauldronFlame>();
+        m_puffEffect = GetComponent<ParticleSystem>();
     }
 
     private void Update()
@@ -93,35 +94,33 @@ public class Cauldron : MonoBehaviour
             case CookState.LightlyCooked:
                 m_audioSource.PlayOneShot(PuffNoise);                
                 m_liquidRenderer.material = m_light;
-                //ParticleSystem.MainModule lightMain = GetComponent<ParticleSystem>().main;
-                //lightMain.startColor = m_liquidRenderer.material.GetColor("_LiquidColorCenter");
-                //PuffEffect.Play();
+                ParticleSystem.MainModule lightMain = GetComponent<ParticleSystem>().main;
+                lightMain.startColor = m_liquidRenderer.material.GetColor("_LiquidColorCenter");
+                m_puffEffect.Play();
                 break;
             case CookState.MediumDone:
                 m_audioSource.PlayOneShot(PuffNoise);
                 m_liquidRenderer.material = m_medium;
-                //ParticleSystem.MainModule mediumMain = GetComponent<ParticleSystem>().main;
-                //mediumMain.startColor = m_liquidRenderer.material.GetColor("_LiquidColorCenter");
-                //PuffEffect.Play();
+                ParticleSystem.MainModule mediumMain = GetComponent<ParticleSystem>().main;
+                mediumMain.startColor = m_liquidRenderer.material.GetColor("_LiquidColorCenter");
+                m_puffEffect.Play();
                 break;
             case CookState.WellDone:
                 m_audioSource.PlayOneShot(PuffNoise);
                 m_liquidRenderer.material = m_wellDone;
-                //ParticleSystem.MainModule wellDoneMain = GetComponent<ParticleSystem>().main;
-                //wellDoneMain.startColor = m_liquidRenderer.material.GetColor("_LiquidColorCenter");
-                //PuffEffect.Play();
+                ParticleSystem.MainModule wellDoneMain = GetComponent<ParticleSystem>().main;
+                wellDoneMain.startColor = m_liquidRenderer.material.GetColor("_LiquidColorCenter");
+                m_puffEffect.Play();
                 break;
             case CookState.overCooked:
                 m_audioSource.PlayOneShot(Explode);               
-                m_liquidRenderer.material = m_default;
-                
-                //ParticleSystem.MainModule main = GetComponent<ParticleSystem>().main;
-                //main.startColor = new Color(0.8f, 0.8f, 0.8f, 1);
-                //PuffEffect.Play();
+                m_liquidRenderer.material = m_default;                
+                ParticleSystem.MainModule main = GetComponent<ParticleSystem>().main;
+                main.startColor = new Color(0.8f, 0.8f, 0.8f, 1);
+                m_puffEffect.Play();
                 StopCooking();                
                 break;
-        }
-        
+        }        
     }
 
     public void GetRecipe(Recipe recipe)
