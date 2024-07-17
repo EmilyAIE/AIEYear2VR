@@ -58,7 +58,7 @@ public class Recipe : ScriptableObject
             {
                 default:
                 case Ingredient.LiveLemming:
-                    Ingredients.Add("Live Lemming");
+                    Ingredients.Add("Living Lemming");
                     break;
                 case Ingredient.EyeOfNewt:
                     Ingredients.Add("Eye Of Newt");
@@ -67,7 +67,7 @@ public class Recipe : ScriptableObject
                     Ingredients.Add("Magic Mushroom");
                     break;
                 case Ingredient.SnakeTongue:
-                    Ingredients.Add("Snake Tongue");
+                    Ingredients.Add("Snakes Tongue");
                     break;
                 case Ingredient.MoonShard:
                     Ingredients.Add("Moon Shard");
