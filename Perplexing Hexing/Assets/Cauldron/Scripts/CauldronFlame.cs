@@ -30,7 +30,6 @@ public class CauldronFlame : MonoBehaviour
         m_audio.Stop();
         FlameObject.SetActive(false);
         FlameLight.SetActive(false);        
-        BubblesTwo.SetActive(false);
-        m_cauldron.StopCooking();
+        BubblesTwo.SetActive(false);        
     }
 }
