@@ -34,7 +34,7 @@ public class CauldronCollider : MonoBehaviour
                 {
                     Debug.Log("Potion Is Incorrect");
                 }
-                m_cauldron.StopCooking();
+                m_cauldron.EnterCookState(CookState.overCooked);
             }
             return;
         }

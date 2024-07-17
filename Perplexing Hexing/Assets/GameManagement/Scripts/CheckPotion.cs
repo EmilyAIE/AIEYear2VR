@@ -1,7 +1,4 @@
 using Pixelplacement;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class CheckPotion : MonoBehaviour
@@ -65,7 +62,7 @@ public class CheckPotion : MonoBehaviour
         m_currentVial.DestroyVial();
         vial.CanFill = true;
         m_animator.SetTrigger("CloseBox");
-        Tween.Spline(ExitSpline, transform, 0, 1, true, 3, 0);
+        Invoke("FlyOut", 1);
         Invoke("FadeOut", 3);
         Invoke("ResetColour", 1.5f);
     }
@@ -107,5 +104,10 @@ public class CheckPotion : MonoBehaviour
         DisolveOne.DisolveIn();
         DisolveTwo.DisolveIn();
         DisolveThree.DisolveIn();
+    }
+
+    public void FlyOut()
+    {
+        Tween.Spline(ExitSpline, transform, 0, 1, true, 3, 0);
     }
 }
