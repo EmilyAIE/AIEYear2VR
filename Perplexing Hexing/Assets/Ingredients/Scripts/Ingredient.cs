@@ -18,6 +18,8 @@ public class Ingredient : MonoBehaviour
         if (collision.gameObject.tag == "BadSurface")
         {
             Invoke("StartDestroyIngredient", m_deleteTime);
+            IngredientSounds sound = GetComponent<IngredientSounds>();
+            sound.ThudNoise();
         }
     }
 

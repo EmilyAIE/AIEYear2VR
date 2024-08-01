@@ -192,6 +192,7 @@ GameObject:
   - component: {fileID: 1878600627194814994}
   - component: {fileID: 2600961041919844254}
   - component: {fileID: 388221922664660653}
+  - component: {fileID: -2421558101755777407}
   m_Layer: 0
   m_Name: PotionA
   m_TagString: Untagged
@@ -347,6 +348,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: -2421558101755777407}
+        m_TargetAssemblyTypeName: IngredientSounds, Assembly-CSharp
+        m_MethodName: PickUpNoise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
@@ -478,6 +491,7 @@ MonoBehaviour:
   Colour: 
   m_regen: {fileID: 0}
   m_deleteTime: 0
+  CanFill: 1
   AmberDefault: {fileID: 2100000, guid: 704eebaff492d5a4192f92c8d0f488ff, type: 2}
   AmberLight: {fileID: 2100000, guid: e9b847efbb14732419f064e4a9a9d013, type: 2}
   AmberMedium: {fileID: 2100000, guid: 2fa2435744ba14142957f78780387533, type: 2}
@@ -503,6 +517,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cad63aa7c3203d9498b1344d1283a395, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-2421558101755777407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4281397253646210361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0c5574549eb9f34ea48c29b1e0a0863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_pickUp: {fileID: 8300000, guid: 6a9ed70d209a5be4daf84c639441a2b8, type: 3}
+  m_thud: {fileID: 8300000, guid: 22020012a361e0c4cb96ae3275580c94, type: 3}
 --- !u!1 &5104839547885265532
 GameObject:
   m_ObjectHideFlags: 0

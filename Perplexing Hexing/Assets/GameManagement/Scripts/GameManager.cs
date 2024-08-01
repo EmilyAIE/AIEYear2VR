@@ -53,6 +53,12 @@ public class GameManager : MonoBehaviour
 
     public bool GameStarted = false;
 
+    [Range(0, 1)]public float BellVol;
+    [Range(0, 1)]public float SuccessVol;
+    [Range(0, 1)]public float FailVol;
+
+
+
     public void Start()
     {
         m_audio = GetComponent<AudioSource>();
@@ -78,7 +84,7 @@ public class GameManager : MonoBehaviour
 
     public void GenerateRecipe(string color)
     {
-        m_audio.PlayOneShot(Bell);
+        m_audio.PlayOneShot(Bell, BellVol);
         OpenInDoor();
         Invoke("CloseInDoor", 2);
         switch(color)

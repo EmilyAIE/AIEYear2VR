@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4379140311432659800}
   - component: {fileID: 6641614680188559564}
   - component: {fileID: 4579506401345708623}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: TitleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -264,7 +264,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &7416663820384508203
 MonoBehaviour:
@@ -362,6 +362,7 @@ MonoBehaviour:
   m_color: {fileID: 0}
   IngredientsContainer: {fileID: 0}
   IngredientDisplayPrefab: {fileID: 2056317849691174847, guid: 96b47cf0c717b8b44bbca2813b0fbca5, type: 3}
+  VialStamps: []
 --- !u!114 &3285700264971886795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -684,7 +685,7 @@ GameObject:
   - component: {fileID: 4814100104846039878}
   - component: {fileID: 4814100104846039880}
   - component: {fileID: 4814100104846039881}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -818,7 +819,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4814100104867526854}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Pages
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1166,7 +1167,7 @@ GameObject:
   - component: {fileID: 4814100104976426134}
   - component: {fileID: 4814100104976426136}
   - component: {fileID: 4814100104976426137}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: TitleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1301,7 +1302,7 @@ GameObject:
   - component: {fileID: 4814100104987993056}
   - component: {fileID: 4814100104987993058}
   - component: {fileID: 4814100104987993059}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: ControlsText (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1436,7 +1437,7 @@ GameObject:
   - component: {fileID: 4814100105052025632}
   - component: {fileID: 4814100105052025634}
   - component: {fileID: 4814100105052025635}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1646,7 +1647,7 @@ GameObject:
   - component: {fileID: 4814100105435308352}
   - component: {fileID: 4814100105435308354}
   - component: {fileID: 4814100105435308355}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1784,7 +1785,7 @@ GameObject:
   - component: {fileID: 4814100105483585667}
   - component: {fileID: 4814100105483585669}
   - component: {fileID: 4814100105483585666}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: ControlsText (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2377,7 +2378,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &4814100105584653294
 MonoBehaviour:
@@ -2449,6 +2450,7 @@ MonoBehaviour:
   m_color: {fileID: 0}
   IngredientsContainer: {fileID: 0}
   IngredientDisplayPrefab: {fileID: 2056317849691174847, guid: 96b47cf0c717b8b44bbca2813b0fbca5, type: 3}
+  VialStamps: []
 --- !u!114 &4814100105584653290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3420,7 +3422,7 @@ GameObject:
   - component: {fileID: 4814100105861788815}
   - component: {fileID: 4814100105861788785}
   - component: {fileID: 4814100105861788814}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3556,7 +3558,7 @@ GameObject:
   - component: {fileID: 4814100105922062299}
   - component: {fileID: 4814100105922062301}
   - component: {fileID: 4814100105922062298}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: ControlsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3690,7 +3692,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4814100105993738266}
   - component: {fileID: 4814100105993738269}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: ControlsLayout
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3776,10 +3778,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4814100106095254115}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.6545131, y: 0.7161, z: -0.8524}
-  m_LocalScale: {x: 0.005, y: 0.005, z: 0.005}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.0075, y: 0.0075, z: 0.0075}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8876835811397362204}
   m_Father: {fileID: 0}
@@ -4040,6 +4042,9 @@ MonoBehaviour:
   m_prevButton: {fileID: 4814100105727325156}
   m_beginButton: {fileID: 4814100105507336982}
   m_titleText: {fileID: 4579506401345708623}
+  GM: {fileID: 0}
+  table1: {fileID: 0}
+  table2: {fileID: 0}
 --- !u!1 &4814100106144177106
 GameObject:
   m_ObjectHideFlags: 0
@@ -4104,7 +4109,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &4814100106144177112
 MonoBehaviour:
@@ -4176,6 +4181,7 @@ MonoBehaviour:
   m_color: {fileID: 0}
   IngredientsContainer: {fileID: 0}
   IngredientDisplayPrefab: {fileID: 2056317849691174847, guid: 96b47cf0c717b8b44bbca2813b0fbca5, type: 3}
+  VialStamps: []
 --- !u!114 &4814100106144177108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4476,7 +4482,7 @@ GameObject:
   - component: {fileID: 4814100106360506140}
   - component: {fileID: 4814100106360506142}
   - component: {fileID: 4814100106360506143}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: TitleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4611,7 +4617,7 @@ GameObject:
   - component: {fileID: 4814100106562483609}
   - component: {fileID: 4814100106562483611}
   - component: {fileID: 4814100106562483608}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: ControlsText (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

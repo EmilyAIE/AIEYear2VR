@@ -54,7 +54,7 @@ public class RegenIngredient : MonoBehaviour
             rigidBody.velocity = Vector3.zero;
 
             newObject.transform.parent = WaitingObject.transform;
-            newObject.transform.rotation = Quaternion.identity;
+            newObject.transform.rotation = WaitingObject.transform.rotation;
             newObject.SetActive(true);
         }
         m_startSpawn = false;

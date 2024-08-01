@@ -25,6 +25,13 @@ public class Cauldron : MonoBehaviour
     public AudioClip PuffNoise;
     public AudioClip Explode;
     public AudioClip Splash;
+    public AudioClip DrowninLem;
+
+    [Range(0, 1)] public float PuffVol;
+    [Range(0, 1)] public float ExplodeVol;
+    [Range(0, 1)] public float SplashVol;
+    [Range(0, 1)] public float DrownVol;
+
 
     private ParticleSystem m_puffEffect;
 
@@ -90,22 +97,22 @@ public class Cauldron : MonoBehaviour
                 m_liquidRenderer.material = m_default;
                 break;
             case CookState.LightlyCooked:
-                m_audioSource.PlayOneShot(PuffNoise);                
+                m_audioSource.PlayOneShot(PuffNoise, PuffVol);                
                 m_liquidRenderer.material = m_light;                
                 m_puffEffect.Play();
                 break;
             case CookState.MediumDone:
-                m_audioSource.PlayOneShot(PuffNoise);
+                m_audioSource.PlayOneShot(PuffNoise, PuffVol);
                 m_liquidRenderer.material = m_medium;                
                 m_puffEffect.Play();
                 break;
             case CookState.WellDone:
-                m_audioSource.PlayOneShot(PuffNoise);
+                m_audioSource.PlayOneShot(PuffNoise, PuffVol);
                 m_liquidRenderer.material = m_wellDone;               
                 m_puffEffect.Play();
                 break;
             case CookState.overCooked:
-                m_audioSource.PlayOneShot(Explode);                               
+                                              
                 m_puffEffect.Play();
                 StopCooking();                
                 break;
@@ -190,6 +197,7 @@ public class Cauldron : MonoBehaviour
         m_currentCookState = CookState.UnderCooked;
         m_liquidRenderer.material = m_default;
         m_audioSource.Stop();
+        m_audioSource.PlayOneShot(Explode, ExplodeVol);
     }
 
     public CookState GetCookState()
@@ -203,5 +211,10 @@ public class Cauldron : MonoBehaviour
         {
             Destroy(gO);
         }
-    }    
+    }
+    
+    public void DrownLemming()
+    {
+        m_audioSource.PlayOneShot(DrowninLem, DrownVol);
+    }
 }

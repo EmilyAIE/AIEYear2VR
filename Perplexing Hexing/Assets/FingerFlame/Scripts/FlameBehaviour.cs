@@ -6,7 +6,7 @@ public class FlameBehaviour : MonoBehaviour
     {
         Debug.Log("trigger");        
         CauldronFlame flame = other.GetComponent<CauldronFlame>();
-        if (flame)
+        if (!flame.Flamin)
         {
             Debug.Log("START COOKING WAHOO GOGOGOGOGGO");
             flame.StartCooking();
